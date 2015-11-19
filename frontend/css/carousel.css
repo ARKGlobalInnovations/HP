@@ -1,42 +1,102 @@
-#tcb-testimonial-carousel {
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
   margin-top: 30px;
 }
-#tcb-testimonial-carousel a {
-  color: #b20000;
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
 }
-#tcb-testimonial-carousel .text-brand {
-  color: #b20000;
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
 }
-#tcb-testimonial-carousel .carousel-indicators .active {
-  background: #b20000;
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
 }
-#tcb-testimonial-carousel .no-margin {
-  margin: 0;
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
 }
-#tcb-testimonial-carousel .carousel-indicators li {
-  border: 1px solid #ccc;
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
 }
-#tcb-testimonial-carousel .carousel-control {
-  color: #b20000;
-  width: 5%;
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
 }
-#tcb-testimonial-carousel .carousel-control:hover,
-#tcb-testimonial-carousel .carousel-control:focus {
-  color: #b20000;
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
 }
-#tcb-testimonial-carousel .carousel-control.left,
-#tcb-testimonial-carousel .carousel-control.right {
-  background-image: none;
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
 }
-#tcb-testimonial-carousel .item {
-  padding: 15px 40px;
-  background: #f8f8f8;
+
+.item blockquote img {
+    margin-bottom: 10px;
 }
-#tcb-testimonial-carousel .media-object {
-  margin: auto;
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
 }
-@media screen and (max-width: 768px) {
-  #tcb-testimonial-carousel .media-object {
-    margin-bottom: 15px;
-  }
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
 }
