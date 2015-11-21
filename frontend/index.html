@@ -83,13 +83,49 @@
             <div class="intro-text">
                 <div class="intro-lead-in">We pack we move</div>
                 <div class="intro-heading">You just come along</div>
-                <a href="#form1" class="page-scroll btn btn-xl" onclick="showForm1()">Tell Me More</a>
+                <a href="#form1" class="page-scroll btn btn-xl" onclick="showForm1()">Shift House</a>
                 <a href="#form2" class="page-scroll btn btn-xl" onclick="showForm2()">Tell Me More</a>
             </div>
         </div>
     </header>
 
-    <section id="form1" style="display:none"><h1>form1</h1></section>
+    <section id="form1" style="padding-top:80px;">
+    <div class="container">
+    <div class="row">
+        <h2 class="col-sm-4 col-sm-offset-4" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your House</h2>
+        <form name="contact_form"  id="contact_form" action="insert.php">
+        <div class="col-sm-4 col-sm-offset-2">
+            <div class="form-group">
+                <label for="movingFrom">From</label>
+                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingFrom" name="movingFrom" placeholder="From?" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
+            </div>  
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="movingTo">To</label>
+                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingto" name="movingto" type="text" placeholder="To?" required>
+            </div>
+            <div class="form-group">
+                <label for="inputPhone">Phone</label>
+                <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
+            </div>                        
+        </div>
+        <input id="contact_form" name="contact_form" type="hidden">
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-8 col-sm-offset-4"  style="padding-top:30px">
+        <button type="submit" id="subnit-form" class="btn btn-primary btn-lg col-sm-6">Start Moving</button>
+        </div>
+        </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    </section>
     <section id="form2" style="display:none"><h1>form2</h1></section>
 
     <!-- Services Section -->
