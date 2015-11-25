@@ -298,7 +298,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 50px;
+    font-size: 60px !important;
     font-weight: 700;
     line-height: 50px;
 }
@@ -871,4 +871,8 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #fed136;
+}
+
+.navbar-brand {
+    padding-top: 0px !important;
 }

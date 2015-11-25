@@ -1,3 +1,16 @@
 #btns {
 	border-radius:0px;
+	background-color: #fff;
+	border-color: #fff;
+    height: 30px;
+    width: 55px;
+    padding: 0px 0px;
+    font-size: 20px;
+    color: #989a9b;
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+#btns i{
+	background-color: #989A9B;
 }

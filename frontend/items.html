@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/items.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,33 +34,267 @@
 
 </head>
 <body>
+<!-- Navigation -->
+<nav class="navbar-default navbar-fixed-top navbar-shrink" style="height:80px">
     <div class="container">
-		<div class="row">
-        <h3>Living Room</h3>
-        <form action='view.php'>
-			<div class="col-sm-2" style="background:#f2f2f2;">
-            <div class="row" style="margin:10px 0px;">
-            <div class="col-xs-6">
-                <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top"><img src="img/gharkipacking.png" alt="GharkiPacking" width="200" height="90" /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#services">How It Works</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#vendors">Vendor</a>
+                </li>                    
+                <li>
+                    <a class="page-scroll" href="#tools">Tools & Tips</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div class="container" style="padding-top:100px">
+    <div class="row">
+    <h3>Living Room</h3>
+    <form action='view.php'>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
             </div>
-            <div class="col-xs-6">
-                <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
             </div>
-            <div class="col-xs-12">
-                <div class="demo-content" style="text-align:center;">Item name<br><br>
-                </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
             </div>
-                  <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
-                    <span class="glyphicon glyphicon-minus"></span>
-                  </button>
-              <input type="hidden" name="">
-	              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
-	                  <span class="glyphicon glyphicon-plus"></span>
-	              </button>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
             </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
             </div>
-        </form>     
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
+            </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
+            </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
+            </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
+            </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+    </form>     
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; Hamara Packing 2016</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li><a href="#">Privacy Policy</a>
+                    </li>
+                    <li><a href="#">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+</footer>
 </body>
 </html>                                		
