@@ -74,7 +74,7 @@
 </nav>
 <div class="container" style="padding-top:100px">
     <div class="row">
-    <h3>Living Room</h3>
+    <h3 style="margin-left: 20px;">Living Room</h3>
     <form action='view.php'>
         <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
         <div class="row" style="margin:10px 0px;">
@@ -265,6 +265,33 @@
               </button>
         </div>
         </div>
+        <div class="col-sm-2" style="margin-left:20px;margin-top:20px; background:#f2f2f2;">
+        <div class="row" style="margin:10px 0px;">
+        <div class="col-xs-6">
+            <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+        </div>
+        <div class="col-xs-6">
+            <i class="fa fa-laptop fa-3x" style="float:right"></i>
+        </div>
+        <div class="col-xs-12">
+            <div class="demo-content" style="text-align:center;">Item name<br><br>
+            </div>
+        </div>
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          <input type="hidden" name="">
+              <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+        </div>
+        </div>
+    <div class="row">
+    <div class="col-sm-12">
+    <button type="submit" class="btn btn-lg btn-info previousroom">Back to Home</button>
+    <button type="submit" class="btn btn-lg btn-info nextroom">Go to Bed Room</button>
+    </div>
+    </div>
     </form>     
     </div>
 </div>
@@ -296,5 +323,6 @@
         </div>
     </div>
 </footer>
+<script src="js/items.js"></script>
 </body>
 </html>                                		

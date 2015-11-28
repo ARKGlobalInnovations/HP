@@ -14,3 +14,16 @@
 #btns i{
 	background-color: #989A9B;
 }
+
+.nextroom {
+    float: right;
+    border-radius: 0px;
+    margin-top: 20px;
+    margin-right: 95px;
+}
+
+.previousroom {
+    border-radius: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
