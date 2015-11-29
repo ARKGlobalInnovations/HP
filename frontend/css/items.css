@@ -15,6 +15,10 @@
 	background-color: #989A9B;
 }
 
+.navbtns {
+    background-color: #337ab7;
+}
+
 .nextroom {
     float: right;
     border-radius: 0px;
@@ -26,4 +30,26 @@
     border-radius: 0px;
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.nav-pills>li,
+.nav-pills>li:hover,
+.nav-pills>li>a:hover{
+    background-color: #337ab7;
+}
+
+
+.nav-pills>li:active{
+    background-color: #5cb85c;
+}
+
+.itemsheader{
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.itemsboxes{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #f2f2f2;
 }
