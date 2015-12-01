@@ -77,28 +77,20 @@
 <div class="row" style="padding-top:120px">
 <div class="col-sm-12">
 <div class="tabbable">
-  <ul class="nav nav-pills nav-stacked col-xs-2">
+  <ul class="nav nav-pills" style="margin-left:20px;">
     <li class="active"><a href="#pane1" data-toggle="tab">Living Room</a></li>
     <li><a href="#pane2" data-toggle="tab">Bed Room</a></li>
     <li><a href="#pane3" data-toggle="tab">Kitchen</a></li>
     <li><a href="#pane4" data-toggle="tab">Store Room</a></li>
-    <li><a href="#pane3" data-toggle="tab">Vehicles</a></li>    
-  </ul>
-  <div class="tab-content col-xs-8">
+    <li><a href="#pane5" data-toggle="tab">Vehicles</a></li>
+    <li><a href="#pane6" data-toggle="tab">Contact Information</a></li>
+  </ul><hr style="margin-left:20px;">
+  <div class="tab-content">
     <div id="pane1" class="tab-pane active">
         <div class="container">
-        <!--div class="row">
-            <div class="col-sm-offset-4 col-sm-6">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    60%
-                  </div>
-                </div>
-            </div>
-        </div-->
         <div class="row">   
         <h3 class="itemsheader">Living Room</h3> 
-        <div class="col-xs-2 itemsboxes">
+        <div class="col-sm-2 itemsboxes">
             <div class="row" style="margin:10px 0px;">
                 <div class="col-xs-6">
                     <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
@@ -142,8 +134,7 @@
         </div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom">Back to Home</button>
-                <button type="submit" class="btn btn-info navbtns nextroom">Go to Bed Room</button>
+                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane2" data-toggle="tab">Go to Bed Room</button>
             </div>
         </div>
         </div>
@@ -197,18 +188,191 @@
         </div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom">Back to Living Room</button>
-                <button type="submit" class="btn btn-info navbtns nextroom">Go to Kitchen</button>
+                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane1" data-toggle="tab">Back to Living Room</button>
+                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane3" data-toggle="tab">Go to Kitchen</button>
             </div>
         </div>
         </div>
         </div>
     </div>
     <div id="pane3" class="tab-pane">
-      <h4>Pane 3 Content</h4>
+        <div class="container">
+        <div class="row">   
+        <h3 class="itemsheader">Kitchen</h3> 
+        <div class="col-xs-2 itemsboxes">
+            <div class="row" style="margin:10px 0px;">
+                <div class="col-xs-6">
+                    <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+                </div>
+                <div class="col-xs-6">
+                    <i class="fa fa-laptop fa-3x" style="float:right"></i>
+                </div>
+                <div class="col-xs-12">
+                    <div class="demo-content" style="text-align:center;">Item name<br><br>
+                    </div>
+                </div>
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <input type="hidden" name="">
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-2 itemsboxes">
+            <div class="row" style="margin:10px 0px;">
+                <div class="col-xs-6">
+                    <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+                </div>
+                <div class="col-xs-6">
+                    <i class="fa fa-laptop fa-3x" style="float:right"></i>
+                </div>
+                <div class="col-xs-12">
+                    <div class="demo-content" style="text-align:center;">Item name<br><br>
+                    </div>
+                </div>
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <input type="hidden" name="">
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane2" data-toggle="tab">Back to Bed Room</button>
+                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane4" data-toggle="tab">Go to Store Room</button>
+            </div>
+        </div>
+        </div>
+        </div>
     </div>
     <div id="pane4" class="tab-pane">
-      <h4>Pane 4 Content</h4>
+        <div class="container">
+        <div class="row">   
+        <h3 class="itemsheader">Store Room</h3> 
+        <div class="col-xs-2 itemsboxes">
+            <div class="row" style="margin:10px 0px;">
+                <div class="col-xs-6">
+                    <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+                </div>
+                <div class="col-xs-6">
+                    <i class="fa fa-laptop fa-3x" style="float:right"></i>
+                </div>
+                <div class="col-xs-12">
+                    <div class="demo-content" style="text-align:center;">Item name<br><br>
+                    </div>
+                </div>
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <input type="hidden" name="">
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-2 itemsboxes">
+            <div class="row" style="margin:10px 0px;">
+                <div class="col-xs-6">
+                    <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+                </div>
+                <div class="col-xs-6">
+                    <i class="fa fa-laptop fa-3x" style="float:right"></i>
+                </div>
+                <div class="col-xs-12">
+                    <div class="demo-content" style="text-align:center;">Item name<br><br>
+                    </div>
+                </div>
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <input type="hidden" name="">
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane3" data-toggle="tab">Back to Kitchen</button>
+                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane5" data-toggle="tab">Go to Vehicles</button>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="pane5" class="tab-pane">
+        <div class="container">
+        <div class="row">   
+        <h3 class="itemsheader">Vehicles</h3> 
+        <div class="col-xs-2 itemsboxes">
+            <div class="row" style="margin:10px 0px;">
+                <div class="col-xs-6">
+                    <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+                </div>
+                <div class="col-xs-6">
+                    <i class="fa fa-laptop fa-3x" style="float:right"></i>
+                </div>
+                <div class="col-xs-12">
+                    <div class="demo-content" style="text-align:center;">Item name<br><br>
+                    </div>
+                </div>
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <input type="hidden" name="">
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-2 itemsboxes">
+            <div class="row" style="margin:10px 0px;">
+                <div class="col-xs-6">
+                    <input type="number" class="form-control input-number" placeholder='0' min="0" max="100" style="width:50px;margin-top:2px;">
+                </div>
+                <div class="col-xs-6">
+                    <i class="fa fa-laptop fa-3x" style="float:right"></i>
+                </div>
+                <div class="col-xs-12">
+                    <div class="demo-content" style="text-align:center;">Item name<br><br>
+                    </div>
+                </div>
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-1 btn btn-danger btn-number"  data-type="minus">
+                <span class="glyphicon glyphicon-minus"></span>
+                </button>
+                <input type="hidden" name="">
+                <button id="btns" type="button" class="col-xs-4 col-xs-offset-2 btn btn-success btn-number" data-type="plus" >
+                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane4" data-toggle="tab">Back to Store Room</button>
+                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane6" data-toggle="tab">Go to Contact Information</button>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="pane6" class="tab-pane">
+        <div class="container">
+        <div class="row">   
+        <h3 class="itemsheader">Contact Information</h3> 
+        <div class="col-sm-12">Contact Form</div>
+        <div class="row">
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane5" data-toggle="tab">Back to Vehicles</button>
+                <button type="submit" class="btn btn-info navbtns nextroom">Submit</button>
+            </div>
+        </div>
+        </div>
+        </div>
     </div>
   </div><!-- /.tab-content -->
 </div><!-- /.tabbable -->
