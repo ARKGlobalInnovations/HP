@@ -37,6 +37,7 @@
 <body>
 <!-- Navigation -->
 <nav class="navbar-default navbar-fixed-top navbar-shrink" style="height:85px">
+        <div class="headerArea">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -69,18 +70,20 @@
             </ul>
         </div>
         <!-- /.navbar-collapse -->
-    <div class="dropdown roomsDropdown hidden-sm hidden-md hidden-lg clearfix"> 
-        <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span> </button> 
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"> 
-            <li class="active"><a href="#pane1" data-toggle="tab">Living Room</a></li> 
-            <li><a href="#pane2" data-toggle="tab">Bed Room</a></li> 
-            <li><a href="#pane3" data-toggle="tab">Kitchen</a></li>
-            <li><a href="#pane4" data-toggle="tab">Store Room</a></li>
-            <li><a href="#pane5" data-toggle="tab">Pooja Room</a></li> 
-            <li><a href="#pane6" data-toggle="tab">Vehicles</a></li>  
-            <li><a href="#pane7" data-toggle="tab">Others</a></li> 
-            <li><a href="#pane8" data-toggle="tab">Contact Information</a></li>
-        </ul> 
+        <div class="dropdown roomsDropdown hidden-sm hidden-md hidden-lg clearfix"> 
+            <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span> </button> 
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1"> 
+                <li class="active"><a href="#pane1" data-toggle="tab">Living Room</a></li> 
+                <li><a href="#pane2" data-toggle="tab">Bed Room</a></li> 
+                <li><a href="#pane3" data-toggle="tab">Kitchen</a></li>
+                <li><a href="#pane4" data-toggle="tab">Store Room</a></li>
+                <li><a href="#pane5" data-toggle="tab">Pooja Room</a></li> 
+                <li><a href="#pane6" data-toggle="tab">Gym</a></li>  
+                <li><a href="#pane7" data-toggle="tab">Vehicles</a></li>  
+                <li><a href="#pane8" data-toggle="tab">Others</a></li> 
+                <li><a href="#pane9" data-toggle="tab">Contact Information</a></li>
+            </ul> 
+        </div>
     </div>
 </nav>
 
@@ -93,7 +96,8 @@
   <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 15%">Kitchen</div>
   <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:10%">Store Room</div>
   <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 10%">Pooja Room</div>
-  <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 10%"></div>
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 5%">Gym</div>
+  <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 5%">Vehicles</div>
   <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:10%">Others</div>
   <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 15%">Contact Information</div>
 </div>
@@ -108,9 +112,10 @@
     <a href="#pane3" data-toggle="tab" class="list-group-item">Kitchen</a> 
     <a href="#pane4" data-toggle="tab" class="list-group-item">Store Room</a>
     <a href="#pane5" data-toggle="tab" class="list-group-item">Pooja Room</a> 
-    <a href="#pane6" data-toggle="tab" class="list-group-item">Vehicles</a>  
-    <a href="#pane7" data-toggle="tab" class="list-group-item">Others</a> 
-    <a href="#pane8" data-toggle="tab" class="list-group-item">Contact Information</a> 
+    <a href="#pane6" data-toggle="tab" class="list-group-item">Gym</a>
+    <a href="#pane7" data-toggle="tab" class="list-group-item">Vehicles</a>  
+    <a href="#pane8" data-toggle="tab" class="list-group-item">Others</a> 
+    <a href="#pane9" data-toggle="tab" class="list-group-item">Contact Information</a> 
 </div>
 </div>
 <div class="col-sm-7 col-md-8" >
@@ -185,6 +190,20 @@
     </div>
     <div id="pane6" class="tab-pane">
         <div class="row">   
+        <h3 class="itemsheader col-xs-12">Gym</h3>
+        <div class="clearfix"></div>
+        <div id="gymItems"></div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane3" data-toggle="tab">Back to Kitchen</button>
+                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane5" data-toggle="tab">Go to Vehicles</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="pane7" class="tab-pane">
+        <div class="row">   
         <h3 class="itemsheader col-xs-12">Vehicles</h3>
         <div class="clearfix"></div>
         <div id="vehicleItems"></div>
@@ -197,7 +216,7 @@
         </div>
         </div>
     </div>
-    <div id="pane7" class="tab-pane">
+    <div id="pane8" class="tab-pane">
         <div class="row">   
         <h3 class="itemsheader col-xs-12">Others</h3>
         <div class="clearfix"></div>
@@ -211,7 +230,7 @@
         </div>
         </div>
     </div>
-    <div id="pane8" class="tab-pane">
+    <div id="pane9" class="tab-pane">
         <div class="row">   
         <h3 class="itemsheader col-xs-12">Contact Information</h3> 
         <div class="row">

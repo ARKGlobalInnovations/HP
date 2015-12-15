@@ -236,6 +236,10 @@ fieldset[disabled] .btn-xl.active {
     color: #fff;
     background-color: #fec503;
 }
+.headerArea{
+    width:96%;
+    margin:auto;
+}
 
 @media(min-width:768px) {
     .navbar-default {
@@ -583,6 +587,9 @@ section h3.section-subheading {
         padding: 0 30px 20px 20px;
         text-align: left;
     }
+    .homePageLogo{
+        width:120px;
+    }
 }
 
 @media(min-width:992px) {
@@ -877,4 +884,7 @@ body {
 
 .navbar-brand {
     padding-top: 0px !important;
+}
+.homePageLogo{
+    width:180px;
 }

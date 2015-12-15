@@ -37,6 +37,10 @@
    width:400px; 
    background:green 
 }
+.headerArea{
+    width:96%;
+    margin:auto;
+}
 
 #btns {
 	border-radius:0px;

@@ -14,6 +14,7 @@ $(document).ready(function(){
 	var kitchenItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
 	var storeRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
 	var poojaRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
+	var gymItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
 	var vehicleItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
 	var otherItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
     function ItemsBoxes(data, container){
@@ -27,6 +28,7 @@ $(document).ready(function(){
     ItemsBoxes(kitchenItems,'kitchenItems');
     ItemsBoxes(storeRoomItems,'storeRoomItems');
     ItemsBoxes(poojaRoomItems,'poojaRoomItems');
+    ItemsBoxes(gymItems,'gymItems');
     ItemsBoxes(vehicleItems,'vehicleItems');
     ItemsBoxes(otherItems,'otherItems');
 
