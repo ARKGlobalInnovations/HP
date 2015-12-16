@@ -220,6 +220,61 @@
         <div class="row">   
         <h3 class="itemsheader col-xs-12">Others</h3>
         <div class="clearfix"></div>
+        <div id="othersData" class="table-responsive othersData">
+            <table class="table table-bordered table-striped"> 
+                <thead> 
+                    <tr> 
+                        <th>Item Name</th> 
+                        <th>Quantity</th> 
+                        <th>Weight (Kgs)</th> 
+                        <th>Delicate</th> 
+                        <th>Item type</th> 
+                        <th>Size</th>
+                        <th style="width:100px">&nbsp;</th>
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td>
+                            <input type="text" class="form-control" placeholder="Item Name">
+                        </td> 
+                        <td>
+                            <input type="text" class="form-control" placeholder="Qty">
+                        </td> 
+                        <td>
+                            <input type="text" class="form-control" placeholder="Weight">
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><span class="hidden-sm hidden-md hidden-lg">Delicate</span>
+                              </label>
+                            </div>
+                        </td> 
+                        <td>
+                            <select class="form-control itemothers-select">
+                              <option>Iron</option>
+                              <option>Glass</option>
+                              <option>Wood</option>
+                              <option>Plastic</option>
+                            </select>
+                        </td> 
+                        <td>
+                            <select class="form-control itemothers-select">
+                              <option>small</option>
+                              <option>large</option>
+                              <option>Ex large</option>
+                              <option>medium</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="button" class="btn btn-danger removeOtherrow" value="X">
+                        </td>
+                    </tr> 
+                </tbody> 
+            </table>
+            <input type="button" class="btn btn-success addOtherrow" value="Add Item">
+        </div>
         <div id="otherItems"></div>
         <div class="clearfix"></div>
         <div class="row">

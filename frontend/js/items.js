@@ -30,7 +30,6 @@ $(document).ready(function(){
     ItemsBoxes(poojaRoomItems,'poojaRoomItems');
     ItemsBoxes(gymItems,'gymItems');
     ItemsBoxes(vehicleItems,'vehicleItems');
-    ItemsBoxes(otherItems,'otherItems');
 
     $(".tab-content").on('click','.btn-Plus',function(){
     	var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
@@ -41,5 +40,13 @@ $(document).ready(function(){
     	$(this).closest(".itemsboxes").find("[placeholder='Qty']").val(--qty);
     	if(qty<=0)
     		$(this).closest(".itemsboxes").find("[placeholder='Qty']").val("");
+    });
+
+    $(".othersData").on('click','.addOtherrow',function(){
+    	var newRow ='<tr><td><input type="text" class="form-control" placeholder="Item Name"></td><td><input type="text" class="form-control" placeholder="Qty"></td><td><input type="text" class="form-control" placeholder="Weight"></td><td><div class="checkbox"><label><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><span class="hidden-sm hidden-md hidden-lg">Delecate</span></label></div></td><td><select class="form-control"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
+    	$(".othersData").find("tbody").append(newRow);
+    });
+    $(".othersData").on('click','.removeOtherrow',function(){
+    	$(this).closest("tr").remove();
     });
 });
