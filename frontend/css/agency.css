@@ -266,6 +266,7 @@ fieldset[disabled] .btn-xl.active {
         padding: 10px 0;
 /*        background-color: #222;*/
         background-image: url(../img/11.jpg);
+        height: 90px;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -433,7 +434,11 @@ section h3.section-subheading {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media screen and (max-width: 767px) {
+    .homePageLogo{
+        width:120px !important;
+        margin-top: -2px !important;
+    }
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
@@ -586,9 +591,6 @@ section h3.section-subheading {
         float: right;
         padding: 0 30px 20px 20px;
         text-align: left;
-    }
-    .homePageLogo{
-        width:120px;
     }
 }
 
@@ -887,4 +889,5 @@ body {
 }
 .homePageLogo{
     width:180px;
+    margin-top:-7px;
 }

@@ -140,6 +140,12 @@
 .itemothers-select{
   min-width:100px;
 }
+.othersData{
+  margin-top:10px;
+}
+.filledClass{
+  background: #f0ad4e !important;
+}
 @media screen and (max-width: 767px) {
    .sidenav {
         height: auto;
