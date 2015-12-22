@@ -121,6 +121,7 @@
     <a href="#pane9" data-toggle="tab" class="list-group-item">Contact Information</a> 
 </div>
 </div>
+<form action="insert.php" method="post">
 <div class="col-sm-7 col-md-8" >
   <div class="tab-content">
   
@@ -239,35 +240,39 @@
                 <tbody> 
                     <tr> 
                         <td>
-                            <input type="text" class="form-control" placeholder="Item Name">
+                            <input type="text" class="form-control" name="oitemname[]" placeholder="Item Name">
                         </td> 
                         <td>
-                            <input type="text" class="form-control" placeholder="Qty">
+                            <input type="text" class="form-control" name="oitemqty[]" placeholder="Qty">
                         </td> 
                         <td>
-                            <input type="text" class="form-control Kilograms" placeholder="Weight">
+                            <input type="text" class="form-control Kilograms"  name="oitemweight[]" placeholder="Weight">
                         </td>
                         <td>
-                            <div class="checkbox">
+                            <select class="form-control itemothers-select" name="oitemdelicate[]">
+                              <option value=="0" checked>NO</option>
+                              <option value="1">YES</option>
+                            </select>
+                            <!-- <div class="checkbox">
                               <label>
-                                <input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><span class="hidden-sm hidden-md hidden-lg">Delicate</span>
+                                <input type="checkbox" id="blankCheckbox" name="oitemdelicate[]" value="delicate" aria-label="..."><span class="hidden-sm hidden-md hidden-lg">Delicate</span>
                               </label>
-                            </div>
+                            </div> -->
                         </td> 
                         <td>
-                            <select class="form-control itemothers-select">
-                              <option>Iron</option>
-                              <option>Glass</option>
-                              <option>Wood</option>
-                              <option>Plastic</option>
+                            <select class="form-control itemothers-select" name="oitemtype[]">
+                              <option value="iron">Iron</option>
+                              <option value="glass">Glass</option>
+                              <option value="wood">Wood</option>
+                              <option value="plastic">Plastic</option>
                             </select>
                         </td> 
                         <td>
-                            <select class="form-control itemothers-select">
-                              <option>small</option>
-                              <option>large</option>
-                              <option>Ex large</option>
-                              <option>medium</option>
+                            <select class="form-control itemothers-select" name="oitemsize[]">
+                              <option value=="small">small</option>
+                              <option value="large">large</option>
+                              <option value="ex large">Ex large</option>
+                              <option value="medium">medium</option>
                             </select>
                         </td>
                         <td>
@@ -282,8 +287,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane4" data-toggle="tab">Back to Store Room</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane6" data-toggle="tab">Go to Contact Information</button>
+                <button type="button" class="btn btn-info navbtns previousroom" href="#pane4" data-toggle="tab">Back to Store Room</button>
+                <button type="button" class="btn btn-info navbtns nextroom" href="#pane6" data-toggle="tab">Go to Contact Information</button>
             </div>
         </div>
         </div>
@@ -294,49 +299,49 @@
         <div class="col-sm-5">
                                         <h4>Current Address</h4>
                                            <div class="form-group">
-                                                    <textarea rows='5' placeholder="Address" class="form-control"></textarea>
+                                                    <textarea rows='5' placeholder="Address" name="caddress" class="form-control"></textarea>
                                                 </div>
                                            
                                                 
                                                 <div class="form-group">
                                                     <label>No of Bed Rooms</label>
-                                                    <select class="form-control">
-                                                        <option>1 BHK</option>
-                                                        <option>2 BHK</option>
-                                                        <option>3 BHK</option>
-                                                        <option>4 BHK & Above</option>
+                                                    <select class="form-control" name="cNoofbedrms">
+                                                        <option value="1">1 BHK</option>
+                                                        <option value="2">2 BHK</option>
+                                                        <option value="3">3 BHK</option>
+                                                        <option value="4">4 BHK & Above</option>
                                                     </select>
                                                 </div>
                                            
                                                 <div class="form-group">
                                                     <label>House Type</label>
-                                                    <select class="form-control">
-                                                        <option>Apartment / Flat</option>
-                                                        <option>Individual House</option>
-                                                        <option>Villa</option>
-                                                        <option>Others</option>
+                                                    <select class="form-control" name="chtype">
+                                                        <option value="Apartment / Flat">Apartment / Flat</option>
+                                                        <option value="Individual House">Individual House</option>
+                                                        <option value="Villa">Villa</option>
+                                                        <option value="Others">Others</option>
                                                     </select>
                                                 </div>
                                            
                                                 <div class="form-group">
                                                     <label>Floor No.</label>
-                                                    <select class="form-control">
-                                                        <option>Ground Floor</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                        <option>6</option>
-                                                        <option>7</option>
-                                                        <option>8</option>
-                                                        <option>9</option>
-                                                        <option>10</option>
-                                                        <option>11</option>
-                                                        <option>12</option>
-                                                        <option>13</option>
-                                                        <option>14</option>
-                                                        <option>15 or Above</option>
+                                                    <select class="form-control" name="cfloor">
+                                                        <option value="0">Ground Floor</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9"> 9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15 or Above</option>
                                                     </select>
                                                 </div>
                                             
@@ -344,10 +349,10 @@
                                                     <label>Elevator Available</label>
                                                    <div class="radio">
       <label style="margin-right:40px;">
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Yes
+        <input type="radio" name="celevator" id="optionsRadios1" value="1" >Yes
       </label>
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No
+        <input type="radio" name="celevator" id="optionsRadios2" value="0" checked>No
       </label>
     </div>
                                                 </div>
@@ -356,10 +361,10 @@
                                                     <label>Do you want labour for Packing and Loading? </label>
                                                     <div class="checkbox">
   <label style="margin-right:40px;">
-    <input type="checkbox" value="">packing
+    <input type="checkbox" name="cpacking" value="yes">packing
   </label>
   <label>
-    <input type="checkbox" value="">
+    <input type="checkbox" name="cloading" value="yes">
     Loading
   </label>
 </div>
@@ -371,49 +376,49 @@
         <div class="col-sm-5">
                                <h4>Destination Address</h4>
                                            <div class="form-group">
-                                                    <textarea rows='5' placeholder="Address" class="form-control"></textarea>
+                                                    <textarea rows='5' placeholder="Address" name="daddress" class="form-control"></textarea>
                                                 </div>
                                            
                                                 
                                                 <div class="form-group">
                                                     <label>No of Bed Rooms</label>
-                                                    <select class="form-control">
-                                                        <option>1 BHK</option>
-                                                        <option>2 BHK</option>
-                                                        <option>3 BHK</option>
-                                                        <option>4 BHK & Above</option>
+                                                    <select class="form-control" name="dNoofbedrms">
+                                                        <option value="1">1 BHK</option>
+                                                        <option value="2">2 BHK</option>
+                                                        <option value="3">3 BHK</option>
+                                                        <option value="4">4 BHK & Above</option>
                                                     </select>
                                                 </div>
                                            
                                                 <div class="form-group">
                                                     <label>House Type</label>
-                                                    <select class="form-control">
-                                                        <option>Apartment / Flat</option>
-                                                        <option>Individual House</option>
-                                                        <option>Villa</option>
-                                                        <option>Others</option>
+                                                    <select class="form-control" name="dhtype">
+                                                        <option value="Apartment / Flat">Apartment / Flat</option>
+                                                        <option value="Individual House">Individual House</option>
+                                                        <option value="Villa">Villa</option>
+                                                        <option value="Others">Others</option>
                                                     </select>
                                                 </div>
                                            
                                                 <div class="form-group">
                                                     <label>Floor No.</label>
-                                                    <select class="form-control">
-                                                        <option>Ground Floor</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                        <option>6</option>
-                                                        <option>7</option>
-                                                        <option>8</option>
-                                                        <option>9</option>
-                                                        <option>10</option>
-                                                        <option>11</option>
-                                                        <option>12</option>
-                                                        <option>13</option>
-                                                        <option>14</option>
-                                                        <option>15 or Above</option>
+                                                    <select class="form-control" name="dfloor">
+                                                        <option value="0">Ground Floor</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9"> 9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15 or Above</option>
                                                     </select>
                                                 </div>
                                             
@@ -421,10 +426,10 @@
                                                     <label>Elevator Available</label>
                                                    <div class="radio">
       <label style="margin-right:40px;">
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Yes
+        <input type="radio" name="delevator" id="delevator2" value="1" checked>Yes
       </label>
       <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No
+        <input type="radio" name="delevator" id="delevator2" value="0">No
       </label>
     </div>
                                                 </div>
@@ -433,10 +438,10 @@
                                                     <label>Do you want labour for Unpacking and Unloading? </label>
                                                     <div class="checkbox">
   <label style="margin-right:40px;">
-    <input type="checkbox" value="">Unpacking
+    <input type="checkbox" name="unpacking" value="yes">Unpacking
   </label>
   <label>
-    <input type="checkbox" value="">
+    <input type="checkbox" name="unloading" value="yes">
     Unloading
   </label>
 </div>
@@ -448,7 +453,7 @@
             <div class="col-sm-3"></div>
                     <div class="form-group col-sm-6">
                                                     <label style="margin-right:40px;">Date & Time of Shipping</label>
-                                                    <input type="text" value="" id="datetimepicker" placeholder="mm-dd-yyyy hh:mm">
+                                                    <input type="text" name="date" value="" id="datetimepicker" placeholder="mm-dd-yyyy hh:mm">
                                                 </div>
 
             <div class="col-sm-3"></div>
@@ -461,14 +466,15 @@
 
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane5" data-toggle="tab">Back to Vehicles</button>
-                <button type="submit" class="btn btn-info navbtns nextroom">Submit</button>
+                <button type="button" class="btn btn-info navbtns previousroom" href="#pane5" data-toggle="tab">Back to Vehicles</button>
+                <button type="submit" name="submit" class="btn btn-info navbtns nextroom">Submit</button>
             </div>
         </div>
         </div>
     </div>
   </div><!-- /.tab-content -->
 </div>
+</form>
 <div class="col-sm-2 col-md-2">
     <div class="addArea2"></div>
         <div class="thumbnail"> <img alt="Eicher" src="img/Eicher.png" data-holder-rendered="true"> 
