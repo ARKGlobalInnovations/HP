@@ -13,7 +13,37 @@ $(document).ready(function(){
             $(".list-group-item").removeClass('active');
             $(this).addClass('active');
     });
+    $.ajax
+    ({
+            url: 'http://localhost:8080/ark/hp/frontend/itemslist.php',
+            dataType: 'json',
+            type: 'get',
+            contentType: 'application/x-www-form-urlencoded',
+            data: '',
+            success: function( data, textStatus, jQxhr )
+            {
+                var livingRoomItems = data.livingroom;
+                var bedRoomItems = data.bedroom;
+                var kitchenItems = data.kitchen;
+                var storeRoomItems = data.storeroom;
+                var poojaRoomItems = data.poojaroom;
+                var gymItems = data.gym;
+                var vehicleItems = data.vehicles;
+                function ItemsBoxes(data, container){
+                    $.each(data, function(index,value) {
+                        var itemBox = '<div class="col-xs-2 itemsboxes" id="'+value.itemId+'"><div class="col-xs-12 wtSize"><div class="col-xs-4"><input type="text" class="form-control quantity" name="itemsquantity[]" placeholder="Qty" value="0"></div><div class="col-xs-5"><input type="hidden" class="form-control" name="" placeholder="aKg" value="'+value.weight+'"><input type="text" class="form-control Kilograms" name="itemweight[]" placeholder="Kg" value="0"></div><div class="col-xs-3"><img src="./icon/'+value.roomName+'/png black/'+value.icons+'"  style="float:right"></img></div></div><div class="clearfix"></div><div class="col-xs-12"><div class="itemName">'+value.itemName+'</div></div><div class="clearfix"></div><div class="col-xs-12 wtSize"><div class="col-xs-6"><select class="form-control" name="itemsize[]" ><option>Small</option><option>Medium</option><option>Large</option><option>Ex Large</option></select></div><div class="col-xs-6"><div class="checkbox"><label><input type="checkbox" name="delicate[]" value="'+value.itemId+'" > Delicate</label></div></div></div><div class="clearfix"></div><div class="itemsboxBtns"><button type="button" class="col-xs-4 btn btn-default btn-Minus"  data-type="minus"><span class="glyphicon glyphicon-minus"></span></button><input type="hidden" name="itemid[]" value="'+value.itemId+'"><button type="button" class="col-xs-4 col-xs-offset-4 btn btn-default pull-right btn-Plus" data-type="plus" ><span class="glyphicon glyphicon-plus"></span></button></div></div>';
+                        $("#"+container).append(itemBox);
+                    });
+                }
+                ItemsBoxes(livingRoomItems,'livingRoomItems');
+                ItemsBoxes(bedRoomItems,'bedRoomItems');
+                ItemsBoxes(kitchenItems,'kitchenItems');
+                ItemsBoxes(storeRoomItems,'storeRoomItems');
+                ItemsBoxes(poojaRoomItems,'poojaRoomItems');
+                ItemsBoxes(gymItems,'gymItems');
+                ItemsBoxes(vehicleItems,'vehicleItems');
 
+<<<<<<< HEAD
 	
     var livingRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"checked", "id":"104"}, {"itemName":"Cooler", "Qty":"", "Kg":"", "Size":"small", "Delicate":"", "id":"103"},{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"checked", "id":"101"}, {"itemName":"Cooler", "Qty":"", "Kg":"", "Size":"small", "Delicate":"", "id":"102"}];
     var bedRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
@@ -36,22 +66,46 @@ $(document).ready(function(){
     ItemsBoxes(poojaRoomItems,'poojaRoomItems');
     ItemsBoxes(gymItems,'gymItems');
     ItemsBoxes(vehicleItems,'vehicleItems');
+=======
+            },
+            error: function( jqXhr, textStatus, errorThrown )
+            {
+              console.log( errorThrown );
+            }
+    });
+>>>>>>> 07c56c34d4862de479ebf12d1b024ebe505daccb
 
     $(".tab-content").on('click','.btn-Plus',function(){
     	var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
-    	$(this).closest(".itemsboxes").find("[placeholder='Qty']").val(++qty);
+        var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+        //wt =12;
+       // alert(wt);
+        
+        //var awt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+        $(this).closest(".itemsboxes").find("[placeholder='Qty']").val(++qty);
         $(this).closest(".itemsboxes").find(".quantity").trigger('click');
+    	$(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+        $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
     });
     $(".tab-content").on('click','.btn-Minus',function(){
     	var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
+        var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+        //var wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
     	$(this).closest(".itemsboxes").find("[placeholder='Qty']").val(--qty);
-    	if(qty<=0)
+        $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+        $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
+    	if(qty<=0){
     		$(this).closest(".itemsboxes").find("[placeholder='Qty']").val("");
-        $(this).closest(".itemsboxes").find(".quantity").trigger('click');
+            $(this).closest(".itemsboxes").find(".quantity").trigger('click');
+           //$(th is).closest(".itemsboxes").find("[placeholder='Kg']").val("");
+            $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
+        
+        }
+
     });
 
     $(".othersData").on('click','.addOtherrow',function(){
-    	var newRow ='<tr><td><input type="text" class="form-control" placeholder="Item Name"></td><td><input type="text" class="form-control" placeholder="Qty"></td><td><input type="text" class="form-control Kilograms" placeholder="Weight"></td><td><div class="checkbox"><label><input type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><span class="hidden-sm hidden-md hidden-lg">Delecate</span></label></div></td><td><select class="form-control"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
+    	var newRow ='<tr><td><input type="text" class="form-control" name="oitemname[]" placeholder="Item Name"></td><td><input type="text" name="oitemqty[]" class="form-control" placeholder="Qty"></td><td><input type="text" name="oitemweight[]" class="form-control Kilograms" placeholder="Weight"></td><td><select class="form-control itemothers-select" name="oitemdelicate[]"> <option value=="0" checked>NO</option> <option value="1">YES</option> </select></td><td><select class="form-control" name="oitemtype[]"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control" name="oitemsize[]"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
     	$(".othersData").find("tbody").append(newRow);
     });
     $(".othersData").on('click','.removeOtherrow',function(){
@@ -70,6 +124,7 @@ $(document).ready(function(){
     $(".tab-content, .othersData").on('keyup','.Kilograms', function(){
         kilos = 0;
           $( ".Kilograms" ).each(function( index, element ) {
+                alert($(this).val());
                 if($(this).val() != "" && $(this).val() != 0){
                        kilos  = kilos + parseInt($(this).val());
                 }
