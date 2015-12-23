@@ -96,24 +96,39 @@
 } 
 .wtSize, .wtSize > div{
     padding:0;
+    height: 37px;
+}
+.wtSize2, .wtSize2 > div{
+    padding:0;
+    height: 25px;
 }
 .wtSize > div input[type="text"]{
   width:80%;
   padding: 6px 2px;
   text-align: center;
 }
-.wtSize > div label{
+.wtSize2 > div .checkbox{
+  margin-top:2px;
+}
+.wtSize2 > div label{
   margin-left:10px;
 }
-.wtSize select{
+.wtSize2 select{
   height: 25px;
-    margin-top: 7px;
     padding: 1px 2px;
 }
+.boxOfItemName{
+  display:table;
+  width:100%;
+}
 .itemName{
-  margin: 5px 0 10px 0;
+  /*margin: 5px 0 10px 0;*/
+  display: table-cell;
   text-align: center;
   font-weight: bold;
+  line-height: 16px;
+  height: 35px;
+  vertical-align: middle;
 }
 .itemsboxBtns{
   margin-top:10px;
@@ -143,6 +158,10 @@
 }
 .filledClass{
   background: #f0ad4e !important;
+}
+.contactInfoDatepicker{
+  width:auto;
+  display: inline-block;
 }
 @media screen and (max-width: 767px) {
    .sidenav {
