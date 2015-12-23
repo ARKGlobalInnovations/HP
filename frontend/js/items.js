@@ -1,10 +1,4 @@
 $(document).ready(function(){
-    $('#datetimepicker').datetimepicker({
-            format:'d/m/Y H:i',
-            minDate:'-1970/01/01',
-            mask:'19/39/9999 29:59'
-        });
-
 	$(".roomsDropdown").find("li").click(function(){
 		$(".roomsDropdown").find("li").removeClass('active');
 	});
@@ -43,37 +37,12 @@ $(document).ready(function(){
                 ItemsBoxes(gymItems,'gymItems');
                 ItemsBoxes(vehicleItems,'vehicleItems');
 
-<<<<<<< HEAD
-	
-    var livingRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"checked", "id":"104"}, {"itemName":"Cooler", "Qty":"", "Kg":"", "Size":"small", "Delicate":"", "id":"103"},{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"checked", "id":"101"}, {"itemName":"Cooler", "Qty":"", "Kg":"", "Size":"small", "Delicate":"", "id":"102"}];
-    var bedRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-	var kitchenItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-	var storeRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-	var poojaRoomItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-	var gymItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-	var vehicleItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-	var otherItems = [{"itemName":"TV", "Qty":"", "Kg":"", "Size":"small", "Delicate":"true", "id":"101"}, {"itemName":"Cooler", "Qty":"0", "Kg":"0", "Size":"small", "Delicate":"true", "id":"102"}];
-    function ItemsBoxes(data, container){
-    	$.each(data, function(index,value) {
-		  	var itemBox = '<div class="col-xs-2 itemsboxes" id="'+value.id+'"><div class="col-xs-12 wtSize"><div class="col-xs-4"><input type="text" class="form-control quantity" placeholder="Qty" value="'+value.Qty+'"></div><div class="col-xs-5"><input type="text" class="form-control Kilograms" placeholder="Kg" value="'+value.Kg+'"></div><div class="col-xs-3"><i class="fa fa-laptop fa-3x" style="float:right"></i></div></div><div class="clearfix"></div><div class="boxOfItemName"><div class="itemName">'+value.itemName+'</div></div><div class="clearfix"></div><div class="col-xs-12 wtSize2"><div class="col-xs-6"><select class="form-control"><option>Small</option><option>Medium</option><option>Large</option><option>Ex Large</option></select></div><div class="col-xs-6"><div class="checkbox"><label><input type="checkbox" '+value.Delicate+'> Delicate</label></div></div></div><div class="clearfix"></div><div class="itemsboxBtns"><button type="button" class="col-xs-4 btn btn-default btn-Minus"  data-type="minus"><span class="glyphicon glyphicon-minus"></span></button><input type="hidden" name=""><button type="button" class="col-xs-4 col-xs-offset-4 btn btn-default pull-right btn-Plus" data-type="plus" ><span class="glyphicon glyphicon-plus"></span></button></div></div>';
-		    $("#"+container).append(itemBox);
-		});
-    }
-    ItemsBoxes(livingRoomItems,'livingRoomItems');
-    ItemsBoxes(bedRoomItems,'bedRoomItems');
-    ItemsBoxes(kitchenItems,'kitchenItems');
-    ItemsBoxes(storeRoomItems,'storeRoomItems');
-    ItemsBoxes(poojaRoomItems,'poojaRoomItems');
-    ItemsBoxes(gymItems,'gymItems');
-    ItemsBoxes(vehicleItems,'vehicleItems');
-=======
             },
             error: function( jqXhr, textStatus, errorThrown )
             {
               console.log( errorThrown );
             }
     });
->>>>>>> 07c56c34d4862de479ebf12d1b024ebe505daccb
 
     $(".tab-content").on('click','.btn-Plus',function(){
     	var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
@@ -132,12 +101,4 @@ $(document).ready(function(){
           $(".totalkgs").val(kilos);
           console.log();
     });
-    $(".navbtns").click(function(){
-        $(".list-group").find(".list-group-item").removeClass("active");
-        var tab = $(this).data("roomtype");
-        $(".list-group").find('.'+tab).addClass("active");
-    });
-
-
-
 });
