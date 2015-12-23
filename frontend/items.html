@@ -13,8 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css"/>
     <!-- Custom CSS -->
     <link href="css/items.css" rel="stylesheet">
     <link href="css/nav-wizard.bootstrap.css" rel="stylesheet">
@@ -110,15 +109,15 @@
 <div class="clearfix"></div>
 <div class="col-sm-3 col-md-2">
 <div class="list-group hidden-xs"> 
-    <a href="#pane1" data-toggle="tab" class="list-group-item active">Living Room</a> 
-    <a href="#pane2" data-toggle="tab" class="list-group-item">Bed Room</a> 
-    <a href="#pane3" data-toggle="tab" class="list-group-item">Kitchen</a> 
-    <a href="#pane4" data-toggle="tab" class="list-group-item">Store Room</a>
-    <a href="#pane5" data-toggle="tab" class="list-group-item">Pooja Room</a> 
-    <a href="#pane6" data-toggle="tab" class="list-group-item">Gym</a>
-    <a href="#pane7" data-toggle="tab" class="list-group-item">Vehicles</a>  
-    <a href="#pane8" data-toggle="tab" class="list-group-item">Others</a> 
-    <a href="#pane9" data-toggle="tab" class="list-group-item">Contact Information</a> 
+                        <a href="#pane1" data-toggle="tab" class="list-group-item one active">Living Room</a> 
+                        <a href="#pane2" data-toggle="tab" class="list-group-item two">Bed Room</a> 
+                        <a href="#pane3" data-toggle="tab" class="list-group-item three">Kitchen</a> 
+                        <a href="#pane4" data-toggle="tab" class="list-group-item four">Store Room</a>
+                        <a href="#pane5" data-toggle="tab" class="list-group-item five">Pooja Room</a> 
+                        <a href="#pane6" data-toggle="tab" class="list-group-item six">Gym</a>
+                        <a href="#pane7" data-toggle="tab" class="list-group-item seven">Vehicles</a>  
+                        <a href="#pane8" data-toggle="tab" class="list-group-item eight">Others</a> 
+                        <a href="#pane9" data-toggle="tab" class="list-group-item nine">Contact Information</a> 
 </div>
 </div>
 <form action="insert.php" method="post">
@@ -132,7 +131,7 @@
         <div id="livingRoomItems"></div>
         <div class="clearfix"></div>
         <div class="col-xs-12">
-                <button type="submit" class="btn btn-info navbtns" href="#pane2" data-toggle="tab">Go to Bed Room</button>
+                                <button type="submit" class="btn btn-info navbtns" data-roomtype="two" href="#pane2" data-toggle="tab">Go to Bed Room</button>
             </div>
         </div>
     </div>
@@ -144,8 +143,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-8">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane1" data-toggle="tab">Back to Living Room</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane3" data-toggle="tab">Go to Kitchen</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="one" href="#pane1" data-toggle="tab">Back to Living Room</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="three" href="#pane3" data-toggle="tab">Go to Kitchen</button>
             </div>
         </div>
         </div>
@@ -158,8 +157,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane2" data-toggle="tab">Back to Bed Room</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane4" data-toggle="tab">Go to Store Room</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="two" href="#pane2" data-toggle="tab">Back to Bed Room</button>
+                                    <button type="submit" class="btn btn-info navbtns" href="#pane4" data-roomtype="four" data-toggle="tab" data-roomtype="four" >Go to Store Room</button>
             </div>
         </div>
         </div>
@@ -172,8 +171,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane3" data-toggle="tab">Back to Kitchen</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane5" data-toggle="tab">Go to Vehicles</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="three" href="#pane3" data-toggle="tab">Back to Kitchen</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="five" href="#pane5" data-toggle="tab">Go to Pooja Room</button>
             </div>
         </div>
         </div>
@@ -186,8 +185,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane3" data-toggle="tab">Back to Kitchen</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane5" data-toggle="tab">Go to Vehicles</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="four" href="#pane4" data-toggle="tab">Back to Store Room</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="six" href="#pane6" data-toggle="tab">Go to Gym</button>
             </div>
         </div>
         </div>
@@ -200,8 +199,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane3" data-toggle="tab">Back to Kitchen</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane5" data-toggle="tab">Go to Vehicles</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="five" href="#pane5" data-toggle="tab">Back to Pooja Room</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="seven" href="#pane7" data-toggle="tab">Go to Vehicles</button>
             </div>
         </div>
         </div>
@@ -214,8 +213,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="submit" class="btn btn-info navbtns previousroom" href="#pane4" data-toggle="tab">Back to Store Room</button>
-                <button type="submit" class="btn btn-info navbtns nextroom" href="#pane6" data-toggle="tab">Go to Contact Information</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="six" href="#pane6" data-toggle="tab">Back to Gym</button>
+                                    <button type="submit" class="btn btn-info navbtns" data-roomtype="eight" href="#pane8" data-toggle="tab">Go to Others</button>
             </div>
         </div>
         </div>
@@ -287,8 +286,8 @@
         <div class="clearfix"></div>
         <div class="row">
             <div class="col-xs-10">
-                <button type="button" class="btn btn-info navbtns previousroom" href="#pane4" data-toggle="tab">Back to Store Room</button>
-                <button type="button" class="btn btn-info navbtns nextroom" href="#pane6" data-toggle="tab">Go to Contact Information</button>
+                        <button type="submit" class="btn btn-info navbtns" data-roomtype="seven" href="#pane7" data-toggle="tab">Back to Vehicles</button>
+                        <button type="submit" class="btn btn-info navbtns" data-roomtype="nine" href="#pane9" data-toggle="tab">Go to Contact Information</button>
             </div>
         </div>
         </div>
@@ -453,7 +452,7 @@
             <div class="col-sm-3"></div>
                     <div class="form-group col-sm-6">
                                                     <label style="margin-right:40px;">Date & Time of Shipping</label>
-                                                    <input type="text" name="date" value="" id="datetimepicker" placeholder="mm-dd-yyyy hh:mm">
+                                                    <input type="text" name="date" value="" class="form-control contactInfoDatepicker" id="datetimepicker">
                                                 </div>
 
             <div class="col-sm-3"></div>
@@ -466,7 +465,7 @@
 
         <div class="row">
             <div class="col-xs-10">
-                <button type="button" class="btn btn-info navbtns previousroom" href="#pane5" data-toggle="tab">Back to Vehicles</button>
+                <button type="button" class="btn btn-info navbtns previousroom" href="#pane8" data-roomtype="eight" data-toggle="tab">Back to Vehicles</button>
                 <button type="submit" name="submit" class="btn btn-info navbtns nextroom">Submit</button>
             </div>
         </div>
@@ -577,15 +576,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-datetimepicker.js"></script>
-    <script>
-            $(document).ready(function(){
-                        $('#datetimepicker').datetimepicker({
-            format: 'yyyy-mm-dd hh:ii'
-        });
-            });
-                
-    </script>
+<script src="js/jquery.datetimepicker.full.js"></script>
+    
     <script src="js/items.js"></script>
      </body>
 </html>                                		

@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $('#datetimepicker').datetimepicker({
+            format:'d/m/Y H:i',
+            minDate:'-1970/01/01',
+            mask:'19/39/9999 29:59'
+        });
+
 	$(".roomsDropdown").find("li").click(function(){
 		$(".roomsDropdown").find("li").removeClass('active');
 	});
@@ -25,7 +31,7 @@ $(document).ready(function(){
                 var vehicleItems = data.vehicles;
                 function ItemsBoxes(data, container){
                     $.each(data, function(index,value) {
-                        var itemBox = '<div class="col-xs-2 itemsboxes" id="'+value.itemId+'"><div class="col-xs-12 wtSize"><div class="col-xs-4"><input type="text" class="form-control quantity" name="itemsquantity[]" placeholder="Qty" value="0"></div><div class="col-xs-5"><input type="hidden" class="form-control" name="" placeholder="aKg" value="'+value.weight+'"><input type="text" class="form-control Kilograms" name="itemweight[]" placeholder="Kg" value="0"></div><div class="col-xs-3"><img src="./icon/'+value.roomName+'/png black/'+value.icons+'"  style="float:right"></img></div></div><div class="clearfix"></div><div class="col-xs-12"><div class="itemName">'+value.itemName+'</div></div><div class="clearfix"></div><div class="col-xs-12 wtSize"><div class="col-xs-6"><select class="form-control" name="itemsize[]" ><option>Small</option><option>Medium</option><option>Large</option><option>Ex Large</option></select></div><div class="col-xs-6"><div class="checkbox"><label><input type="checkbox" name="delicate[]" value="'+value.itemId+'" > Delicate</label></div></div></div><div class="clearfix"></div><div class="itemsboxBtns"><button type="button" class="col-xs-4 btn btn-default btn-Minus"  data-type="minus"><span class="glyphicon glyphicon-minus"></span></button><input type="hidden" name="itemid[]" value="'+value.itemId+'"><button type="button" class="col-xs-4 col-xs-offset-4 btn btn-default pull-right btn-Plus" data-type="plus" ><span class="glyphicon glyphicon-plus"></span></button></div></div>';
+                        var itemBox = '<div class="col-xs-2 itemsboxes" id="'+value.itemId+'"><div class="col-xs-12 wtSize"><div class="col-xs-4"><input type="text" class="form-control quantity" name="itemsquantity[]" placeholder="Qty" value="0"></div><div class="col-xs-5"><input type="hidden" class="form-control" name="" placeholder="aKg" value="'+value.weight+'"><input type="text" class="form-control Kilograms" name="itemweight[]" placeholder="Kg" value="0"></div><div class="col-xs-3"><img src="./icon/'+value.roomName+'/png black/'+value.icons+'"  style="float:right"></img></div></div><div class="clearfix"></div><div class="boxOfItemName"><div class="itemName">'+value.itemName+'</div></div><div class="clearfix"></div><div class="col-xs-12 wtSize"><div class="col-xs-6"><select class="form-control" name="itemsize[]" ><option>Small</option><option>Medium</option><option>Large</option><option>Ex Large</option></select></div><div class="col-xs-6"><div class="checkbox"><label><input type="checkbox" name="delicate[]" value="'+value.itemId+'" > Delicate</label></div></div></div><div class="clearfix"></div><div class="itemsboxBtns"><button type="button" class="col-xs-4 btn btn-default btn-Minus"  data-type="minus"><span class="glyphicon glyphicon-minus"></span></button><input type="hidden" name="itemid[]" value="'+value.itemId+'"><button type="button" class="col-xs-4 col-xs-offset-4 btn btn-default pull-right btn-Plus" data-type="plus" ><span class="glyphicon glyphicon-plus"></span></button></div></div>';
                         $("#"+container).append(itemBox);
                     });
                 }
@@ -74,7 +80,7 @@ $(document).ready(function(){
     });
 
     $(".othersData").on('click','.addOtherrow',function(){
-    	var newRow ='<tr><td><input type="text" class="form-control" name="oitemname[]" placeholder="Item Name"></td><td><input type="text" name="oitemqty[]" class="form-control" placeholder="Qty"></td><td><input type="text" name="oitemweight[]" class="form-control Kilograms" placeholder="Weight"></td><td><select class="form-control itemothers-select" name="oitemdelicate[]"> <option value=="0" checked>NO</option> <option value="1">YES</option> </select></td><td><select class="form-control" name="oitemtype[]"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control" name="oitemsize[]"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
+    	var newRow ='<tr><td><input type="text" class="form-control" name="oitemname[]" placeholder="Item Name"></td><td><input type="text" name="oitemqty[]" class="form-control" placeholder="Qty"></td><td><input type="text" name="oitemweight[]" class="form-control Kilograms" placeholder="Weight"></td><td><select class="form-control itemothers-select" name="oitemdelicate[]"> <option value=="0" checked>No</option> <option value="1">Yes</option> </select></td><td><select class="form-control" name="oitemtype[]"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control" name="oitemsize[]"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
     	$(".othersData").find("tbody").append(newRow);
     });
     $(".othersData").on('click','.removeOtherrow',function(){
@@ -101,4 +107,12 @@ $(document).ready(function(){
           $(".totalkgs").val(kilos);
           console.log();
     });
+    $(".navbtns").click(function(){
+        $(".list-group").find(".list-group-item").removeClass("active");
+        var tab = $(this).data("roomtype");
+        $(".list-group").find('.'+tab).addClass("active");
+    });
+
+
+
 });
