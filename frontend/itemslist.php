@@ -15,15 +15,18 @@ if(mysql_num_rows($sql) > 0){
 			$kitchen[]=$res;	
 		}
 		else if($res['roomType'] == 4){
-			$storeroom[]=$res;	
+			$officeroom[]=$res;	
 		}
 		else if($res['roomType'] == 5){
-			$poojaroom[]=$res;	
+			$storeroom[]=$res;	
 		}
 		else if($res['roomType'] == 6){
-			$gym[]=$res;	
+			$poojaroom[]=$res;	
 		}
 		else if($res['roomType'] == 7){
+			$gym[]=$res;	
+		}
+		else if($res['roomType'] == 8){
 			$vehicles[]=$res;	
 		}
 	}
@@ -31,8 +34,8 @@ if(mysql_num_rows($sql) > 0){
 
 
 
-	$json = array("status" => "true","msg" => "items list", "livingroom" => $livingroom,"bedroom" => $bedroom,"kitchen"=>$kitchen
-		, "kitchen" => $kitchen, "storeroom" => $storeroom, "poojaroom" => $poojaroom, "gym" => $gym, "vehicles" => $vehicles);
+	$json = array("status" => "true","msg" => "items list", "livingroom" => $livingroom,"bedroom" => $bedroom,"kitchen"=>$kitchen,
+	"officeroom" => $officeroom, "storeroom" => $storeroom, "poojaroom" => $poojaroom, "gym" => $gym, "vehicles" => $vehicles);
 }
 else{
 	$livingroom="No data Found";

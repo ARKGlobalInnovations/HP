@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
     $.ajax
     ({
-            url: 'http://localhost:8080/ark/hp/frontend/itemslist.php',
+            url: 'http://localhost/hp/frontend/itemslist.php',
             dataType: 'json',
             type: 'get',
             contentType: 'application/x-www-form-urlencoded',
@@ -25,6 +25,7 @@ $(document).ready(function(){
                 var livingRoomItems = data.livingroom;
                 var bedRoomItems = data.bedroom;
                 var kitchenItems = data.kitchen;
+				var officeRoomItems = data.officeroom;
                 var storeRoomItems = data.storeroom;
                 var poojaRoomItems = data.poojaroom;
                 var gymItems = data.gym;
@@ -38,6 +39,7 @@ $(document).ready(function(){
                 ItemsBoxes(livingRoomItems,'livingRoomItems');
                 ItemsBoxes(bedRoomItems,'bedRoomItems');
                 ItemsBoxes(kitchenItems,'kitchenItems');
+				ItemsBoxes(officeRoomItems,'officeRoomItems');
                 ItemsBoxes(storeRoomItems,'storeRoomItems');
                 ItemsBoxes(poojaRoomItems,'poojaRoomItems');
                 ItemsBoxes(gymItems,'gymItems');
