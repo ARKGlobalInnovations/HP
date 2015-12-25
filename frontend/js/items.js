@@ -9,10 +9,58 @@ $(document).ready(function(){
 		$(".roomsDropdown").find("li").removeClass('active');
 	});
 
+
+    var progressArr = [15,15,15,10,10,10,5,5,5,15];
 	$(".list-group-item").click(function(){
             $(".list-group-item").removeClass('active');
             $(this).addClass('active');
+            
     });
+
+    $(".othersData").on('click','.addOtherrow',function(){
+        var newRow ='<tr><td><input type="text" class="form-control" name="oitemname[]" placeholder="Item Name"></td><td><input type="text" name="oitemqty[]" class="form-control" placeholder="Qty"></td><td><input type="text" name="oitemweight[]" class="form-control Kilograms" placeholder="Weight"></td><td><select class="form-control itemothers-select" name="oitemdelicate[]"> <option value=="0" checked>No</option> <option value="1">Yes</option> </select></td><td><select class="form-control" name="oitemtype[]"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control" name="oitemsize[]"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
+        $(".othersData").find("tbody").append(newRow);
+    });
+
+    $(".othersData").on('click','.removeOtherrow',function(){
+        $trCount = $(this).closest("table").find("tr").length;
+        console.log($trCount);
+        if($trCount == 2){
+           $(this).closest("tr").find("input[type='text']").val("");
+        }else{
+            $(this).closest("tr").remove();    
+        }
+    });
+
+    $(".tab-content, .othersData").on('keyup','.Kilograms', function(){
+        kilos = 0;
+          $( ".Kilograms" ).each(function( index, element ) {
+                if($(this).val() != "" && $(this).val() != 0){
+                       kilos  = kilos + parseInt($(this).val());
+                }
+          });
+          $(".totalkgs").val(kilos).trigger('click');
+
+    });
+    $(".navbtns").click(function(){
+        $(".list-group").find(".list-group-item").removeClass("active");
+        var tab = $(this).data("roomtype");
+        $(".list-group").find('.'+tab).addClass("active");
+    });
+
+    $(".totalkgs").click(function(){
+        var totalweight = $(this).val();
+        if(totalweight > 1000){
+            $("#vechileImg").attr('src','img/Eicher.png');
+          }
+          else{
+            $("#vechileImg").attr('src','img/miniVehicle.jpg');
+          }
+    });
+
+    
+
+
     $.ajax
     ({
             url: 'http://localhost/hp/frontend/itemslist.php',
@@ -64,6 +112,7 @@ $(document).ready(function(){
     	$(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
         $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
     });
+
     $(".tab-content").on('click','.btn-Minus',function(){
     	var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
         var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
@@ -81,14 +130,6 @@ $(document).ready(function(){
 
     });
 
-    $(".othersData").on('click','.addOtherrow',function(){
-    	var newRow ='<tr><td><input type="text" class="form-control" name="oitemname[]" placeholder="Item Name"></td><td><input type="text" name="oitemqty[]" class="form-control" placeholder="Qty"></td><td><input type="text" name="oitemweight[]" class="form-control Kilograms" placeholder="Weight"></td><td><select class="form-control itemothers-select" name="oitemdelicate[]"> <option value=="0" checked>No</option> <option value="1">Yes</option> </select></td><td><select class="form-control" name="oitemtype[]"><option>Iron</option><option>Glass</option><option>Wood</option><option>Plastic</option></select></td><td><select class="form-control" name="oitemsize[]"><option>small</option><option>large</option><option>Ex large</option><option>medium</option></select></td><td><input type="button" class="btn btn-danger removeOtherrow" value="X"></td></tr>';
-    	$(".othersData").find("tbody").append(newRow);
-    });
-    $(".othersData").on('click','.removeOtherrow',function(){
-    	$(this).closest("tr").remove();
-    });
-
     $(".tab-content").on('change blur keyup click','.quantity', function(){
         var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
         if(qty > 0){
@@ -98,22 +139,6 @@ $(document).ready(function(){
         }
     });
 
-    $(".tab-content, .othersData").on('keyup','.Kilograms', function(){
-        kilos = 0;
-          $( ".Kilograms" ).each(function( index, element ) {
-                alert($(this).val());
-                if($(this).val() != "" && $(this).val() != 0){
-                       kilos  = kilos + parseInt($(this).val());
-                }
-          });
-          $(".totalkgs").val(kilos);
-          console.log();
-    });
-    $(".navbtns").click(function(){
-        $(".list-group").find(".list-group-item").removeClass("active");
-        var tab = $(this).data("roomtype");
-        $(".list-group").find('.'+tab).addClass("active");
-    });
 
 
 
