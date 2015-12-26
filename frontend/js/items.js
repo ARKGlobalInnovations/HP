@@ -166,7 +166,38 @@ var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
 
 
     });
+	
+	   $(".tab-content").on('focus','.quantity', function(){
+        qtyfocus = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
+    });
+	
+	$(".tab-content").on('change','.quantity', function(){
+        var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
+        var wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+        if(qty > 0){
+            $(this).closest(".itemsboxes").addClass('filledClass');
+            if(wt!=""  && wt!=NaN){
+                wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+                $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt/qtyfocus);
+                wt1 = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+                $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt1*qty);
+            }else{
+                wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+                $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+            }
 
+        }else{
+            $(this).closest(".itemsboxes").removeClass('filledClass');
+            if(qty<=0){
+                $(this).closest(".itemsboxes").find("[placeholder='Qty']").val("");
+                $(this).closest(".itemsboxes").find(".quantity").trigger('click');
+                $(this).closest(".itemsboxes").find("[placeholder='Kg']").val("");
+                $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
+            }
+        }
+    });
+	
+/*
     $(".tab-content").on('change blur keyup click','.quantity', function(){
         var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
         if(qty > 0){
@@ -177,6 +208,6 @@ var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
     });
 
 
-
+*/
 
 });
