@@ -101,15 +101,33 @@ $(document).ready(function(){
     });
 
     $(".tab-content").on('click','.btn-Plus',function(){
-    	var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
-        var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+var qty = $(this).closest(".itemsboxes").find("[placeholder='Qty']").val();
+
+        //var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
         //wt =12;
        // alert(wt);
         
         //var awt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
         $(this).closest(".itemsboxes").find("[placeholder='Qty']").val(++qty);
+        if(qty==1)
+        {
+           var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+        }
+        else if (qty==2)
+        {
+            wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+        }else{
+            wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+            var count = qty;
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt/--count);
+            var wt1 = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt1*qty);
+        }
+
         $(this).closest(".itemsboxes").find(".quantity").trigger('click');
-    	$(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+
         $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
     });
 
@@ -118,15 +136,34 @@ $(document).ready(function(){
         var wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
         //var wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
     	$(this).closest(".itemsboxes").find("[placeholder='Qty']").val(--qty);
-        $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+        if(qty==1)
+        {
+            if(wt==""){
+                wt = $(this).closest(".itemsboxes").find("[placeholder='aKg']").val();
+            }
+            else{
+                wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+                $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt/2);
+                wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+            }
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
+        }
+        else {
+            wt = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+            var count = qty;
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt/++count);
+            var wt1 = $(this).closest(".itemsboxes").find("[placeholder='Kg']").val();
+            $(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt1*qty);
+        }
+        //$(this).closest(".itemsboxes").find("[placeholder='Kg']").val(wt*qty);
         $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
     	if(qty<=0){
     		$(this).closest(".itemsboxes").find("[placeholder='Qty']").val("");
             $(this).closest(".itemsboxes").find(".quantity").trigger('click');
             $(this).closest(".itemsboxes").find("[placeholder='Kg']").val("");
             $(this).closest(".itemsboxes").find(".Kilograms").trigger('click');
-        
         }
+
 
     });
 
