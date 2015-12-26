@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2015 at 09:19 PM
+-- Generation Time: Dec 26, 2015 at 07:28 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -154,10 +154,10 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (111, 1, '0', 'Shoe Rack', 20, 'Shoe Rack.png'),
 (112, 1, '0', 'Swing Chair', 10, 'Swing-chair.png'),
 (113, 7, '0', 'Treadmill', 35, 'Treadmill.png'),
-(114, 1, '0', 'Vacuum Cleaner', 5, 'Vacuum-cleaner.png'),
+(114, 1, '0', 'Vaccum Cleaner', 5, 'Vacuum-cleaner.png'),
 (115, 1, '0', 'Washing Machine', 25, 'Washing-machine.png'),
-(116, 0, '', 'Rice Bags 25 Kgs', 25, ''),
-(117, 0, '', 'Gym Plates 10 Kgs', 10, '');
+(116, 0, '', 'Rice Bag 25 Kgs', 25, ''),
+(117, 0, '', 'Gym Weight Rods & Plates 10 Kgs', 10, '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
