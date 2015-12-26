@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2015 at 07:28 AM
+-- Generation Time: Dec 26, 2015 at 07:33 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -19,6 +19,125 @@ SET time_zone = "+00:00";
 --
 -- Database: `packersandmovers`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `adminId` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL,
+  PRIMARY KEY (`adminId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminId`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookingdateandtime`
+--
+
+CREATE TABLE IF NOT EXISTS `bookingdateandtime` (
+  `bookingId` int(11) NOT NULL AUTO_INCREMENT,
+  `bookingTime` time NOT NULL,
+  `shipingDate` date NOT NULL,
+  `deliveryDate` date NOT NULL,
+  `currentAddressId` int(11) NOT NULL,
+  `destinationAddressId` int(11) NOT NULL,
+  `currentItemsId` varchar(25) NOT NULL,
+  `otherItemsId` varchar(25) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `bookingModifiedTime` time NOT NULL,
+  `sharingType` tinyint(1) NOT NULL,
+  `p/up` int(1) NOT NULL,
+  `currentStatus` tinyint(4) NOT NULL,
+  PRIMARY KEY (`bookingId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `bookingdateandtime`
+--
+
+INSERT INTO `bookingdateandtime` (`bookingId`, `bookingTime`, `shipingDate`, `deliveryDate`, `currentAddressId`, `destinationAddressId`, `currentItemsId`, `otherItemsId`, `userId`, `bookingModifiedTime`, `sharingType`, `p/up`, `currentStatus`) VALUES
+(1, '06:35:00', '2015-12-16', '0000-00-00', 1, 1, '1,2,3,4,5,6,7,8', '1,2,3,4', 1, '00:00:00', 0, 0, 0),
+(2, '10:00:00', '2015-12-08', '0000-00-00', 2, 2, '9,10,11,12,13', '5,6,7,8,9', 1, '00:00:00', 0, 0, 0),
+(3, '06:30:00', '2015-12-30', '0000-00-00', 3, 3, '14,15,16', '10,11', 1, '00:00:00', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `currentaddress`
+--
+
+CREATE TABLE IF NOT EXISTS `currentaddress` (
+  `currentAddressId` int(11) NOT NULL AUTO_INCREMENT,
+  `currentAddress` varchar(25) NOT NULL,
+  `numberOfBedRooms` int(1) NOT NULL,
+  `houseType` varchar(25) NOT NULL,
+  `floorNumber` int(1) NOT NULL,
+  `elevator` tinyint(4) NOT NULL,
+  `packing` tinyint(4) NOT NULL,
+  `loading` tinyint(4) NOT NULL,
+  `userId` int(11) NOT NULL,
+  PRIMARY KEY (`currentAddressId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `currentaddress`
+--
+
+INSERT INTO `currentaddress` (`currentAddressId`, `currentAddress`, `numberOfBedRooms`, `houseType`, `floorNumber`, `elevator`, `packing`, `loading`, `userId`) VALUES
+(1, 'nandyal', 2, 'Individual House', 2, 0, 1, 0, 1),
+(2, 'kurnool', 2, 'Individual House', 2, 0, 1, 1, 1),
+(3, 'bang', 2, 'Individual House', 3, 1, 1, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `currentitems`
+--
+
+CREATE TABLE IF NOT EXISTS `currentitems` (
+  `currentItemsId` int(11) NOT NULL AUTO_INCREMENT,
+  `itemId` int(11) NOT NULL,
+  `itemWeight` int(3) NOT NULL,
+  `itemType` varchar(25) NOT NULL,
+  `itemQuantity` int(3) NOT NULL,
+  `itemsize` varchar(25) NOT NULL,
+  `delicate` tinyint(4) NOT NULL,
+  PRIMARY KEY (`currentItemsId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `currentitems`
+--
+
+INSERT INTO `currentitems` (`currentItemsId`, `itemId`, `itemWeight`, `itemType`, `itemQuantity`, `itemsize`, `delicate`) VALUES
+(1, 1, 12, '', 2, 'Medium', 0),
+(2, 2, 20, '', 1, 'Large', 0),
+(3, 3, 0, '', 2, 'Small', 0),
+(4, 4, 10, '', 1, 'Ex Large', 0),
+(5, 5, 13, '', 1, 'Small', 0),
+(6, 86, 50, '', 2, 'Medium', 0),
+(7, 92, 1400, '', 1, 'Small', 0),
+(8, 106, 150, '', 1, 'Small', 0),
+(9, 1, 12, '', 2, 'Small', 0),
+(10, 2, 40, '', 2, 'Small', 0),
+(11, 3, 0, '', 1, 'Small', 0),
+(12, 4, 20, '', 2, 'Small', 0),
+(13, 5, 26, '', 2, 'Small', 0),
+(14, 1, 12, '', 2, 'Small', 1),
+(15, 2, 40, '', 2, 'Small', 1),
+(16, 3, 0, '', 1, 'Small', 0);
 
 -- --------------------------------------------------------
 
@@ -158,6 +277,171 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (115, 1, '0', 'Washing Machine', 25, 'Washing-machine.png'),
 (116, 0, '', 'Rice Bag 25 Kgs', 25, ''),
 (117, 0, '', 'Gym Weight Rods & Plates 10 Kgs', 10, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `destinationaddress`
+--
+
+CREATE TABLE IF NOT EXISTS `destinationaddress` (
+  `destinationAddressId` int(11) NOT NULL AUTO_INCREMENT,
+  `destinationAddress` varchar(55) NOT NULL,
+  `numberOfBedRooms` int(1) NOT NULL,
+  `destinationHouseType` varchar(25) NOT NULL,
+  `floorNumber` int(1) NOT NULL,
+  `elevator` tinyint(4) NOT NULL,
+  `unpacking` int(11) NOT NULL,
+  `unloading` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  PRIMARY KEY (`destinationAddressId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `destinationaddress`
+--
+
+INSERT INTO `destinationaddress` (`destinationAddressId`, `destinationAddress`, `numberOfBedRooms`, `destinationHouseType`, `floorNumber`, `elevator`, `unpacking`, `unloading`, `userId`) VALUES
+(1, 'nalgonda', 0, 'Villa', 5, 1, 1, 0, 1),
+(2, 'hyderabad', 0, 'Villa', 11, 1, 1, 1, 1),
+(3, 'delhi', 0, 'Individual House', 3, 0, 1, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE IF NOT EXISTS `feedback` (
+  `feedbackId` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) NOT NULL,
+  `feedback` varchar(255) NOT NULL,
+  PRIMARY KEY (`feedbackId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `keycodes`
+--
+
+CREATE TABLE IF NOT EXISTS `keycodes` (
+  `keyCodesId` int(11) NOT NULL AUTO_INCREMENT,
+  `city` varchar(25) NOT NULL,
+  `area` varchar(25) NOT NULL,
+  `pinCode` int(1) NOT NULL,
+  PRIMARY KEY (`keyCodesId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `otheritems`
+--
+
+CREATE TABLE IF NOT EXISTS `otheritems` (
+  `otherItemsId` int(11) NOT NULL AUTO_INCREMENT,
+  `otherItemName` varchar(25) NOT NULL,
+  `otherItemQuantity` int(11) NOT NULL,
+  `otherItemWeight` varchar(25) NOT NULL,
+  `otherItemDelicate` tinyint(4) NOT NULL,
+  `otherItemType` varchar(22) NOT NULL,
+  `otherItemSize` varchar(22) NOT NULL,
+  PRIMARY KEY (`otherItemsId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `otheritems`
+--
+
+INSERT INTO `otheritems` (`otherItemsId`, `otherItemName`, `otherItemQuantity`, `otherItemWeight`, `otherItemDelicate`, `otherItemType`, `otherItemSize`) VALUES
+(1, 'aa', 1, '23', 1, 'wood', 'ex large'),
+(2, 'bb', 2, '32', 0, 'Glass', 'large'),
+(3, 'ccc', 3, '43', 1, 'Plastic', 'medium'),
+(4, 'dd', 4, '54', 0, 'Iron', 'small'),
+(5, 'ab', 1, '20', 0, 'iron', '="small"'),
+(6, 'ac', 1, '24', 1, 'Glass', 'large'),
+(7, 'ad', 2, '', 1, 'Wood', 'Ex large'),
+(8, 'ae', 1, '', 0, 'Plastic', 'medium'),
+(9, 'af', 3, '23', 0, 'Glass', 'small'),
+(10, 'aaaa', 1, '1', 1, 'iron', '="small"'),
+(11, 'bbbb', 2, '2', 0, 'Iron', 'small');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roomtype`
+--
+
+CREATE TABLE IF NOT EXISTS `roomtype` (
+  `roomTypeId` int(11) NOT NULL AUTO_INCREMENT,
+  `roomName` varchar(25) NOT NULL,
+  PRIMARY KEY (`roomTypeId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `roomtype`
+--
+
+INSERT INTO `roomtype` (`roomTypeId`, `roomName`) VALUES
+(1, 'Living Room'),
+(2, 'Bed Room'),
+(3, 'Kitchen'),
+(4, 'Office Room'),
+(5, 'Store Room'),
+(6, 'Pooja Room'),
+(7, 'Gym'),
+(8, 'Vehicles'),
+(9, 'Others');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `primaryContact` bigint(10) NOT NULL,
+  `secondaryContact` bigint(10) NOT NULL,
+  `points` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `userType` int(1) NOT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userId`, `userName`, `email`, `primaryContact`, `secondaryContact`, `points`, `status`, `userType`) VALUES
+(1, '', 'sss@gmail.com', 9656569652, 0, 0, 0, 0),
+(2, '', 'sss@gmail.com', 9656569652, 0, 0, 0, 0),
+(3, '', 'sss@gmail.com', 9656569652, 0, 0, 0, 0),
+(4, '', 'msd@gmail.com', 9656569658, 0, 0, 0, 0),
+(5, '', 'msd@gmail.com', 9656569658, 0, 0, 0, 0),
+(6, '', 'msd1@gmail.com', 9656569658, 0, 0, 0, 0),
+(7, '', 'msd12@gmail.com', 9656569658, 0, 0, 0, 0),
+(8, '', 'mssd12@gmail.com', 9656569658, 0, 0, 0, 0),
+(9, '', 'mssd@gmail.com', 9656569658, 0, 0, 0, 0),
+(10, '', 'mssd123@gmail.com', 9656569658, 0, 0, 0, 0),
+(11, '', 'sudha@gmail.com', 9656569658, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vendordetailsandprice`
+--
+
+CREATE TABLE IF NOT EXISTS `vendordetailsandprice` (
+  `vendorId` int(11) NOT NULL AUTO_INCREMENT,
+  `vendorName` varchar(25) NOT NULL,
+  `price` int(6) NOT NULL,
+  `sharingType` tinyint(4) NOT NULL,
+  PRIMARY KEY (`vendorId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
