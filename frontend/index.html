@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css"/>
 
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
@@ -90,9 +91,7 @@
     </nav>
 
     <!-- Header -->
-    <header >
-
-        <div class="container" style="position:relative; overflow:hidden">
+    <header style="position:relative; overflow:hidden; padding:0">
             <div class="mask"></div>
             <div class="intro-text">
                 <div class="intro-lead-in">We pack we move</div>
@@ -100,35 +99,46 @@
                 <a href="#form1" class="page-scroll btn btn-xl" onclick="showForm1()" style="background-color:#ff6666;border-color:#ff6666"><i class="fa fa-2x fa-home" style="padding-right:10px"></i>Shift House</a>
                 <a href="#form2" class="page-scroll btn btn-xl" onclick="showForm2()" style="background-color:#ff6666;border-color:#ff6666"><i class="fa fa-2x fa-suitcase" style="padding-right:10px"></i>Shift Item</a>
             </div>
-
-        </div>
-        
     </header>
 
     <section id="form1" style="display:none;">
-    <div class="container">
     <div class="row">
-        <h2 class="col-sm-4 col-sm-offset-4" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your House</h2>
+        <h2 class="col-sm-8 col-sm-offset-2" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your House
+        <a type="button" class="close HousecloseBtn"><span aria-hidden="true">x</span></a>
+        </h2>
         <form name="contact_form"  id="contact_form" action="insert.php">
         <div class="col-sm-4 col-sm-offset-2">
             <div class="form-group">
-                <label for="movingFrom">From *</label>
-                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingFrom" name="movingFrom" placeholder="From?" type="text" required autocomplete="on">
+                <label for="movingHouseFrom">From *</label>
+                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingHouseFrom" name="movingHouseFrom" placeholder="From?" type="text" required autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="inputEmail">Email *</label>
                 <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
-            </div>  
+            </div>
+            <div class="form-group">
+                                        <label>No of Bed Rooms</label>
+                                        <select name="cNoofbedrms" class="form-control">
+                                            <option value="1">1 BHK</option>
+                                            <option value="2">2 BHK</option>
+                                            <option value="3">3 BHK</option>
+                                            <option value="4">4 BHK &amp; Above</option>
+                                        </select>
+                                    </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="movingTo">To *</label>
-                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingto" name="movingto" type="text" placeholder="To?" required  autocomplete="on">
+                <label for="movingHouseTo">To *</label>
+                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingHouseTo" name="movingHouseTo" type="text" placeholder="To?" required  autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="inputPhone">Phone *</label>
                 <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
-            </div>                        
+            </div>  
+            <div class="form-group">
+                <label style="margin-right:40px;">Date & Time of Shipping</label>
+                <input type="text" name="date" value="" class="form-control" id="Housedatetimepicker">
+            </div>                      
         </div>
         <input id="contact_form" name="contact_form" type="hidden">
         <div class="container">
@@ -140,32 +150,45 @@
         </div>
         </form>
     </div>
-    </div>
     </section>
     <section id="form2" style="display:none">
-    <div class="container">
     <div class="row">
-        <h2 class="col-sm-4 col-sm-offset-4" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your Item</h2>
+        <h2 class="col-sm-8 col-sm-offset-2" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your Item
+        <a type="button" class="close ItemcloseBtn"><span aria-hidden="true">x</span></a>
+        </h2>
         <form name="contact_form"  id="contact_form" action="insert.php">
         <div class="col-sm-4 col-sm-offset-2">
             <div class="form-group">
-                <label for="movingFrom">From *</label>
-                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingFrom" name="movingFrom" placeholder="From?" type="text" required>
+                <label for="movingItemFrom">From *</label>
+                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingItemFrom" name="movingItemFrom" placeholder="From?" type="text" required  autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="inputEmail">Email *</label>
                 <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
             </div>  
+            <div class="form-group">
+                <label>No of Bed Rooms</label>
+                <select name="cNoofbedrms" class="form-control">
+                    <option value="1">1 BHK</option>
+                    <option value="2">2 BHK</option>
+                    <option value="3">3 BHK</option>
+                    <option value="4">4 BHK &amp; Above</option>
+                </select>
+            </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">
-                <label for="movingTo">To *</label>
-                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingto" name="movingto" type="text" placeholder="To?" required>
+                <label for="movingItemTo">To *</label>
+                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingItemTo" name="movingItemTo" type="text" placeholder="To?" required autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="inputPhone">Phone *</label>
                 <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
-            </div>                        
+            </div>
+            <div class="form-group">
+                <label style="margin-right:40px;">Date & Time of Shipping</label>
+                <input type="text" name="date" value="" class="form-control" id="Itemdatetimepicker">
+            </div>                          
         </div>
         <input id="contact_form" name="contact_form" type="hidden">
         <div class="container">
@@ -176,7 +199,6 @@
         </div>
         </div>
         </form>
-    </div>
     </div>
     </section>
 
@@ -283,7 +305,7 @@
   </div>
 
 
-
+<!-- 
 <div id="vendors" style="padding-top:100px;"><h2 style="text-align:center;">Our Vendors</h2></div>
 <section style="padding-top:100px;padding-bottom:100px">
     <div id="wrapper">
@@ -326,7 +348,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
     <section id="tools">
         <div class="container">
@@ -451,6 +473,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

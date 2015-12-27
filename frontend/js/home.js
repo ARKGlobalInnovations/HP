@@ -16,6 +16,11 @@ function closeForm2(){
 }
 
 $(document).ready(function(){
+	$('#Itemdatetimepicker, #Housedatetimepicker').datetimepicker({
+            format:'d/m/Y H:i',
+            minDate:'-1970/01/01',
+            mask:'19/39/9999 29:59'
+        });
 	$(document).scroll(function(){
 		var x = $(this).scrollTop();
 		if(x > 490){
@@ -25,9 +30,19 @@ $(document).ready(function(){
 			$(".dupliateBtn").addClass("hidden");
 		}
 	});
-	var origin = document.getElementById('movingFrom');
+	var HomeOrigin = document.getElementById('movingHouseFrom');
 	var options = {componentRestrictions: {country: 'in'}};
-    var movingFrom = new google.maps.places.Autocomplete(origin, options);
-    var destination = document.getElementById('movingto');
-    var movingto = new google.maps.places.Autocomplete(destination, options);
+    var movingHouseFrom = new google.maps.places.Autocomplete(HomeOrigin, options);
+    var HomeDestination = document.getElementById('movingHouseTo');
+    var movingHouseTo = new google.maps.places.Autocomplete(HomeDestination, options);
+
+    var ItemOrigin = document.getElementById('movingItemFrom');
+    var movingItemFrom = new google.maps.places.Autocomplete(ItemOrigin, options);
+    var ItemDestination = document.getElementById('movingItemTo');
+    var movingItemTo = new google.maps.places.Autocomplete(ItemDestination, options);
+    
+
+    $(document).on('click', '.HousecloseBtn, .ItemcloseBtn', function(){
+    	$(this).closest('section').hide();
+    });
 });

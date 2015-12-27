@@ -118,7 +118,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-color: #f57324;
     border-radius: 3px;
     text-transform: uppercase;
@@ -127,6 +127,7 @@ fieldset[disabled] .btn-primary.active {
     font-weight: 700;
     color: #fff;
     background-color: #f57324;
+    margin:10px;
 }
 
 /*.btn-xl:hover,
@@ -243,7 +244,7 @@ fieldset[disabled] .btn-xl.active {
 .mask{
     width:100%;
     height: 1000px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.5);
     position: absolute;
     top:0;
 }
