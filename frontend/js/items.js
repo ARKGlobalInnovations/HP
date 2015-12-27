@@ -9,31 +9,25 @@ $(document).ready(function(){
 		$(".roomsDropdown").find("li").removeClass('active');
 	});
 
-    var progressArr = [{'count':'one','width':15},{'count':'two','width':15},{'count':'three','width':15},{'count':'four','width':10},{'count':'five','width':10},{'count':'six','width':10},{'count':'seven','width':5},{'count':'eight','width':5},{'count':'nine','width':5},{'count':'ten','width':10}];
+    var progressArr = [{'no':1,'count':'one','width':15},{'no':2,'count':'two','width':15},{'no':3,'count':'three','width':15},{'no':4,'count':'four','width':10},{'no':5,'count':'five','width':10},{'no':6,'count':'six','width':10},{'no':7,'count':'seven','width':10},{'no':8,'count':'eight','width':10},{'no':9,'count':'nine','width':5},{'no':10,'count':'ten','width':10}];
     
     function progressBar(tabno){
-        var pbCount=0;
-        jQuery.each(progressArr, function(index,value){
-            if(value.count ==  tabno){
-                pbCount = value.width;
-                console.log(pbCount);
-            }
-        });
-
-        for(var i=0; i<5; i++){
+        for(var i=0; i<progressArr.length; i++){
             var x = progressArr[i].width;
-            j=i+1;
+            j=i;
             $(".progress > div:nth-child("+j+")").css('width',x+"%");
+            if(progressArr[i].count == tabno){
+                break;
+            }
         }
     }
-    progressBar('six');
 
 	$(".list-group-item").click(function(){
             $(".list-group-item").removeClass('active');
             $(this).addClass('active');
             $(document).scrollTop(0);
             var roomtype = $(this).data('roomtype');
-            console.log(roomtype);
+            progressBar(roomtype);
     });
 
     $(".othersData").on('click','.addOtherrow',function(){
@@ -55,6 +49,7 @@ $(document).ready(function(){
         $(".list-group").find(".list-group-item").removeClass("active");
         var tab = $(this).data("roomtype");
         $(".list-group").find('.'+tab).addClass("active");
+        progressBar(tab);
         $(document).scrollTop(0);
     });
 
@@ -78,6 +73,7 @@ $(document).ready(function(){
       }
     });
     
+
 
 
     $.ajax
