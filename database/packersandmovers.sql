@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2015 at 09:01 AM
+-- Generation Time: Dec 27, 2015 at 10:48 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -216,12 +216,11 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (54, 3, '0', 'Dining Table 6 Chairs or Above', 85, 'Dining Table 6 Chairs.png'),
 (55, 3, '0', 'Dish Washer', 50, 'Dish Washer.png'),
 (56, 3, '0', 'Gas Cylinder', 10, 'Gas Cylinder.png'),
-(57, 3, '0', 'Gas Stove', 10, 'Gas Stove.png'),
-(58, 3, '0', 'Gas Stove Big', 15, 'Gas Stove big.png '),
-(59, 3, '0', 'Gas Stove Small', 10, 'Gas Stove small.png'),
+(58, 3, '0', 'Gas Stove 4 Burner', 15, 'Gas Stove 4 Burner.png '),
+(59, 3, '0', 'Gas Stove 2 Burner', 10, 'Gas Stove 2 Burner.png'),
 (60, 3, '0', 'Glass Dining Table 4 Chairs', 70, 'Glass Dining Table 4 Chairs.png'),
 (61, 3, '0', 'Glass Dining Table 6 Chair or Above', 85, 'Glass Dining Table 6 Chairs.png'),
-(62, 3, '0', 'Kitchen Wear', 10, 'kitchen Wear.png'),
+(62, 3, '0', 'Kitchenware', 10, 'Kitchenware.png'),
 (63, 3, '0', 'Kitchen Boxes ', 10, 'Kitchen Boxes.png'),
 (64, 3, '0', 'Kitchen Boxes ', 15, 'Kitchen Boxes.png'),
 (65, 3, '0', 'Mixer Grinder', 20, 'Mixer Grinder.png'),
