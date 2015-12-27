@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2015 at 06:52 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Generation Time: Dec 27, 2015 at 09:01 AM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.11
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -191,7 +191,7 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (29, 2, '0', 'Single Cot Bed Regular', 18, 'Single Cot Bed Regular.png'),
 (30, 2, '0', 'Split AC', 48, 'Split Ac.png'),
 (31, 2, '0', 'Wardrobe Steel', 30, 'Wardrobe Steel.png'),
-(32, 2, '0', 'Wardrobe Wooden', 50, 'Wardrobe-Wooden.png'),
+(32, 2, '0', 'Wardrobe Wooden', 50, 'Wardrobe Wooden.png'),
 (33, 2, '0', 'Window AC', 75, 'Window Ac.png'),
 (34, 2, '0', 'Bunk Bed', 25, 'Bunk Bed.png'),
 (35, 2, '0', 'Clothes Boxes', 8, 'Clothes Boxes.png'),
@@ -219,7 +219,7 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (57, 3, '0', 'Gas Stove', 10, 'Gas Stove.png'),
 (58, 3, '0', 'Gas Stove Big', 15, 'Gas Stove big.png '),
 (59, 3, '0', 'Gas Stove Small', 10, 'Gas Stove small.png'),
-(60, 3, '0', 'Glass Dining Table 4 Chair', 70, 'Glass-Dining Table 4 Chairs.png'),
+(60, 3, '0', 'Glass Dining Table 4 Chairs', 70, 'Glass Dining Table 4 Chairs.png'),
 (61, 3, '0', 'Glass Dining Table 6 Chair or Above', 85, 'Glass Dining Table 6 Chairs.png'),
 (62, 3, '0', 'Kitchen Wear', 10, 'kitchen Wear.png'),
 (63, 3, '0', 'Kitchen Boxes ', 10, 'Kitchen Boxes.png'),
@@ -235,9 +235,8 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (73, 4, '0', '2 Drawer File', 10, '2-Drawer File.png'),
 (74, 4, '0', '3 Drawer File', 13, '3-Drawer File.png'),
 (75, 4, '0', '4 Drawer File', 15, '4-Drawer File.png'),
-(76, 4, '0', '2 Drawer Lat File', 15, '2-Drawer Lat File.png'),
-(77, 4, '0', '4 Drawer Lat File', 20, '4-Drawer Lat File.png'),
-(78, 4, '0', 'Computers ', 5, 'Computers.png'),
+(76, 4, '0', '2 Drawer Lat File', 15, '2 Drawer Lat File.png'),
+(77, 4, '0', '4 Drawer Lat File', 20, '4 Drawer Lat File.png'),
 (79, 4, '0', 'Credenza', 15, 'Credenza.png'),
 (80, 4, '0', 'Desk Chair', 8, 'Desk Chair.png'),
 (81, 4, '0', 'Office Desk Big', 10, 'Office Desk Big.png'),
@@ -250,18 +249,18 @@ INSERT INTO `defaultitems` (`itemId`, `roomType`, `itemType`, `itemName`, `weigh
 (88, 2, '0', 'Book Shelf', 20, 'Book Shelf.png'),
 (89, 5, '0', 'Box Under 50kg to 70kg', 60, 'Box under 50kg to 70kg.png'),
 (90, 5, '0', 'Box Under 50kg', 50, 'Box under 50kg.png'),
-(91, 8, '0', 'Car Sedan', 1800, 'car(big).png'),
-(92, 8, '0', 'Car Hatchback', 1400, 'car(small).png'),
+(91, 8, '0', 'Car Sedan', 1800, 'Car Sedan.png'),
+(92, 8, '0', 'Car Hatchback', 1400, 'Car HatchBack.png'),
 (93, 2, '0', 'Ceiling Fans ', 2, 'Ceiling Fans .png'),
 (94, 2, '0', 'Chest of Drawers', 8, 'Chest of Drawers.png'),
 (95, 2, '0', 'Cloth Stand', 5, 'Cloth Stand.png'),
 (96, 7, '0', 'Cross Trainer', 25, 'Cross Trainer.png'),
-(97, 7, '0', 'Dumbbell 25 Kgs or Above', 50, 'Dumbbell above 50kg black.png'),
-(98, 7, '0', 'Dumbbell 25 Kgs or Below', 25, 'Dumbbell below 50kg black.png'),
+(97, 7, '0', 'Dumbbell Above 25 Kgs', 50, 'Dumbbell Above 25 Kgs.png'),
+(98, 7, '0', 'Dumbbell 25 Kgs or Below', 25, 'Dumbbell 25 Kgs or Below.png'),
 (99, 7, '0', 'Exercise Cycle', 40, 'Exercise Cycle.png'),
 (100, 1, '0', 'Flower Pot', 4, 'Flower Pot.png'),
 (101, 2, '0', 'Geyser', 45, 'Geyser.png'),
-(102, 7, '0', 'Gym all in one', 100, 'Gym all in one.png'),
+(102, 7, '0', 'Gym All in One', 100, 'Gym all in one.png'),
 (103, 2, '0', 'Iron Rack', 25, 'Iron Rack.png'),
 (104, 2, '0', 'Mirror', 15, 'Mirror.png'),
 (105, 1, '0', 'Misc Boxes', 25, 'Misc boxes.png'),
