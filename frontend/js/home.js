@@ -25,4 +25,8 @@ $(document).ready(function(){
 			$(".dupliateBtn").addClass("hidden");
 		}
 	});
+	var origin = document.getElementById('movingFrom');
+    var movingFrom = new google.maps.places.Autocomplete(origin);
+    var destination = document.getElementById('movingto');
+    var movingto = new google.maps.places.Autocomplete(destination);
 });
