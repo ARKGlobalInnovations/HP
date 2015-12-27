@@ -26,7 +26,8 @@ $(document).ready(function(){
 		}
 	});
 	var origin = document.getElementById('movingFrom');
-    var movingFrom = new google.maps.places.Autocomplete(origin);
+	var options = {componentRestrictions: {country: 'in'}};
+    var movingFrom = new google.maps.places.Autocomplete(origin, options);
     var destination = document.getElementById('movingto');
-    var movingto = new google.maps.places.Autocomplete(destination);
+    var movingto = new google.maps.places.Autocomplete(destination, options);
 });
