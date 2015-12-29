@@ -480,7 +480,10 @@
       <div class="col-sm-6">
           
       </div>
-      <div class="col-sm-6">
+
+
+
+      <div class="col-sm-6 signInUp signInBox">
         <form>
           <h2>SIGN IN</h2>
           <div class="form-group">
@@ -499,16 +502,49 @@
           <div class="form-group">
           <button type="submit" class="btn btn-warning btn-block">Submit</button>
           </div>
-          <div class="form-group">
+          <div class="form-group signBtnsArea">
           <div class="col-xs-8">
             <a href="#">Forgot Password?</a>
         </div>
-        <div class="col-xs-4">
-            <a href="#">SIGN UP</a>
+        <div class="col-xs-4 text-right">
+            <a href="#" class="signUpBtn">SIGN UP</a>
         </div>
           </div>
         </form>
         </div>
+
+        <div class="col-sm-6 signInUp signUpBox hidden">
+        <form>
+          <h2>SIGN UP</h2>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            By signing up, you agree to our <a href="#">terms and conditions.</a>
+          </div>
+          <div class="form-group">
+          <button type="submit" class="btn btn-warning btn-block">Proceed</button>
+          </div>
+          <div class="form-group signBtnsArea">
+            <div class="col-xs-8">
+                Already have an account?
+            </div>
+            <div class="col-xs-4 text-right">
+                <a href="#" class="signInBtn">SIGN IN</a>
+            </div>
+          </div>
+        </form>
+        </div>
+
+
+
+
+
         </div>
       </div>
     </div>

@@ -45,4 +45,11 @@ $(document).ready(function(){
     $(document).on('click', '.HousecloseBtn, .ItemcloseBtn', function(){
     	$(this).closest('section').hide();
     });
+
+    $('#LoginPopup').on('shown.bs.modal', function () {
+        $('.signUpBtn, .signInBtn').click(function(){
+            $(".signInUp").removeClass('hidden');
+            $(this).closest('.signInUp').addClass('hidden');
+        });
+    });
 });
