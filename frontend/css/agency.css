@@ -248,6 +248,25 @@ fieldset[disabled] .btn-xl.active {
     position: absolute;
     top:0;
 }
+
+.LoginPopup .modal-content{
+    border-radius: 0px !important;
+}
+.LoginPopup .modal-content h2{
+    margin:0px !important;
+}
+.LoginPopup .modal-header{
+    padding: 0px !important;
+    min-height: 0px !important;   
+}
+.LoginPopup .modal-header .close{
+        position: absolute;
+        z-index: 100;
+        font-size: 50px !important;
+        right: 5px;
+        top: 5px;
+}
+
 @media(min-width:768px) {
     .navbar-default {
         padding: 25px 0;
