@@ -271,6 +271,19 @@ fieldset[disabled] .btn-xl.active {
 .LoginPopup .modal-content .signBtnsArea div{
     padding:0px;
 }
+.whyGarkiPacking, .tools{
+    background: #eee;
+}
+.whyGarkiPacking .glyphicon{
+    font-size:50px;
+    color:#f57324;
+}
+.whyGarkiPacking .pointsforWGP p{
+    font-size: 1.2em;
+}
+.whyGarkiPacking .pointsforWGP p span{
+    color:#f57324;
+}
 
 @media(min-width:768px) {
     .navbar-default {
@@ -366,7 +379,7 @@ header .intro-text .intro-heading {
 }
 
 section {
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 section h2.section-heading {
@@ -386,7 +399,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 100px 0;
+        padding: 70px 0;
     }
 }
 

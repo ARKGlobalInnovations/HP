@@ -102,109 +102,108 @@
     </header>
 
     <section id="form1" style="display:none;">
-    <div class="row">
-        <h2 class="col-sm-8 col-sm-offset-2" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your House
-        <a type="button" class="close HousecloseBtn"><span aria-hidden="true">x</span></a>
-        </h2>
-        <form name="contact_form"  id="contact_form" action="insert.php">
-        <div class="col-sm-4 col-sm-offset-2">
-            <div class="form-group">
-                <label for="movingHouseFrom">From *</label>
-                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingHouseFrom" name="movingHouseFrom" placeholder="From?" type="text" required autocomplete="on">
-            </div>
-            <div class="form-group">
-                <label for="inputEmail">Email *</label>
-                <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <label>No of Bed Rooms</label>
-                <select name="cNoofbedrms" class="form-control">
-                    <option value="1">1 BHK</option>
-                    <option value="2">2 BHK</option>
-                    <option value="3">3 BHK</option>
-                    <option value="4">4 BHK &amp; Above</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="movingHouseTo">To *</label>
-                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingHouseTo" name="movingHouseTo" type="text" placeholder="To?" required  autocomplete="on">
-            </div>
-            <div class="form-group">
-                <label for="inputPhone">Phone *</label>
-                <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
-            </div>  
-            <div class="form-group">
-                <label style="margin-right:40px;">Date & Time of Shipping</label>
-                <input type="text" name="date" value="" class="form-control" id="Housedatetimepicker">
-            </div>                      
-        </div>
-        <input id="contact_form" name="contact_form" type="hidden">
-        <div class="container">
         <div class="row">
-        <div class="col-sm-8 col-sm-offset-4"  style="padding-top:30px">
-        <button type="submit" id="submit-form" class="btn btn-primary btn-lg col-sm-6" data-toggle="modal" data-target="#LoginPopup">Start Moving</button>
+            <h2 class="col-sm-8 col-sm-offset-2" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your House
+            <a type="button" class="close HousecloseBtn"><span aria-hidden="true">x</span></a>
+            </h2>
+            <form name="contact_form"  id="contact_form" action="insert.php">
+            <div class="col-sm-4 col-sm-offset-2">
+                <div class="form-group">
+                    <label for="movingHouseFrom">From *</label>
+                    <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingHouseFrom" name="movingHouseFrom" placeholder="From?" type="text" required autocomplete="on">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email *</label>
+                    <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label>No of Bed Rooms</label>
+                    <select name="cNoofbedrms" class="form-control">
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                        <option value="4">4 BHK &amp; Above</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="movingHouseTo">To *</label>
+                    <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingHouseTo" name="movingHouseTo" type="text" placeholder="To?" required  autocomplete="on">
+                </div>
+                <div class="form-group">
+                    <label for="inputPhone">Phone *</label>
+                    <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
+                </div>  
+                <div class="form-group">
+                    <label style="margin-right:40px;">Date & Time of Shipping</label>
+                    <input type="text" name="date" value="" class="form-control" id="Housedatetimepicker">
+                </div>                      
+            </div>
+            <input id="contact_form" name="contact_form" type="hidden">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-8 col-sm-offset-4"  style="padding-top:30px">
+            <button type="submit" id="submit-form" class="btn btn-primary btn-lg col-sm-6" data-toggle="modal" data-target="#LoginPopup">Start Moving</button>
+            </div>
+            </div>
+            </div>
+            </form>
         </div>
-        </div>
-        </div>
-        </form>
-    </div>
     </section>
     <section id="form2" style="display:none">
-    <div class="row">
-        <h2 class="col-sm-8 col-sm-offset-2" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your Item
-        <a type="button" class="close ItemcloseBtn"><span aria-hidden="true">x</span></a>
-        </h2>
-        <form name="contact_form"  id="contact_form" action="insert.php">
-        <div class="col-sm-4 col-sm-offset-2">
-            <div class="form-group">
-                <label for="movingItemFrom">From *</label>
-                <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingItemFrom" name="movingItemFrom" placeholder="From?" type="text" required  autocomplete="on">
-            </div>
-            <div class="form-group">
-                <label for="inputEmail">Email *</label>
-                <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
-            </div>  
-            <div class="form-group">
-                <label>No of Bed Rooms</label>
-                <select name="cNoofbedrms" class="form-control">
-                    <option value="1">1 BHK</option>
-                    <option value="2">2 BHK</option>
-                    <option value="3">3 BHK</option>
-                    <option value="4">4 BHK &amp; Above</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="movingItemTo">To *</label>
-                <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingItemTo" name="movingItemTo" type="text" placeholder="To?" required autocomplete="on">
-            </div>
-            <div class="form-group">
-                <label for="inputPhone">Phone *</label>
-                <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
-            </div>
-            <div class="form-group">
-                <label style="margin-right:40px;">Date & Time of Shipping</label>
-                <input type="text" name="date" value="" class="form-control" id="Itemdatetimepicker">
-            </div>                          
-        </div>
-        <input id="contact_form" name="contact_form" type="hidden">
-        <div class="container">
         <div class="row">
-        <div class="col-sm-8 col-sm-offset-4"  style="padding-top:30px">
-        <button type="submit" id="submit-form" class="btn btn-primary btn-lg col-sm-6" data-toggle="modal" data-target="#LoginPopup">Ship Your Item</button>
+            <h2 class="col-sm-8 col-sm-offset-2" style="text-align:center;margin-bottom: 30px;margin-top:0px;">Shift Your Item
+            <a type="button" class="close ItemcloseBtn"><span aria-hidden="true">x</span></a>
+            </h2>
+            <form name="contact_form"  id="contact_form" action="insert.php">
+            <div class="col-sm-4 col-sm-offset-2">
+                <div class="form-group">
+                    <label for="movingItemFrom">From *</label>
+                    <input class="form-control" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" id="movingItemFrom" name="movingItemFrom" placeholder="From?" type="text" required  autocomplete="on">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email *</label>
+                    <input pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" class="form-control" id="email" type="email" name="email" placeholder="Email" required>
+                </div>  
+                <div class="form-group">
+                    <label>No of Bed Rooms</label>
+                    <select name="cNoofbedrms" class="form-control">
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                        <option value="4">4 BHK &amp; Above</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="movingItemTo">To *</label>
+                    <input pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"  class="form-control" id="movingItemTo" name="movingItemTo" type="text" placeholder="To?" required autocomplete="on">
+                </div>
+                <div class="form-group">
+                    <label for="inputPhone">Phone *</label>
+                    <input pattern="[0-9]{10}" class="form-control" id="phone" name="phone" placeholder="Phone number" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label style="margin-right:40px;">Date & Time of Shipping</label>
+                    <input type="text" name="date" value="" class="form-control" id="Itemdatetimepicker">
+                </div>                          
+            </div>
+            <input id="contact_form" name="contact_form" type="hidden">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-8 col-sm-offset-4"  style="padding-top:30px">
+            <button type="submit" id="submit-form" class="btn btn-primary btn-lg col-sm-6" data-toggle="modal" data-target="#LoginPopup">Ship Your Item</button>
+            </div>
+            </div>
+            </div>
+            </form>
         </div>
-        </div>
-        </div>
-        </form>
-    </div>
     </section>
 
     <!-- Services Section -->
     <section id="services">
-        <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">How it works</h2>
@@ -233,11 +232,56 @@
 					<a href="" class="btn btn-xl">Know More</a>
                 </div>
             </div>
-        </div>
+    </section>
+
+
+    <!-- Why Garki Packing Section -->
+    <section id="whyGarkiPacking" class="whyGarkiPacking">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Why GarkiPacking ?</h2>
+                </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="row text-center">
+                <div class="col-md-3">
+                  <p><span aria-hidden="true" class="glyphicon glyphicon-home"></span><p>
+                    <p>More than</p>
+                    <h4>13,687+</h4>
+                    <p>homes moved</p>
+                </div>
+                <div class="col-md-3">
+                 <p><span aria-hidden="true" class="glyphicon glyphicon-map-marker"></span><p>
+                   <p>We've covered</p>
+                    <h4>566+</h4>
+                    <p>Indian cities</p>
+                </div>
+                <div class="col-md-3">
+                  <p><span aria-hidden="true" class="glyphicon glyphicon-user"></span><p>
+                    <p>Choose from</p>
+                    <h4>150+</h4>
+                    <p>Packers & Movers</p>
+                </div>
+                <div class="col-md-3">
+                  <p><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span><p>
+                   <p>Satisfied</p>
+                    <h4>98%</h4>
+                    <p>Customers</p>
+                </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="row pointsforWGP">
+                <p class="text-center"><span>Complete online solution</span> which is flexible and saves time &amp; money.</p>
+                <p class="text-center">Qualitative and quantitative tools to <span>assist in decision making.</span></p> 
+                <p class="text-center"><span>Real Time Monitoring and Alerts </span>enables Better control over service delivery.</p>
+                <p class="text-center">Value added services and <span>Tracking of Assets</span> feedback.</p>
+                <p class="text-center"><span>Dedicated Move Coordinator</span> for every customer- through out the mo
+                ve</p>
+            </div>
     </section>
 
     <!-- Carousel -->
-
+    <section>
   <div class='row'>
     <div class='col-md-offset-1 col-md-10'>
     <h1 style="text-align:center;">We have helped <strong>thousands</strong> of families<br>shift their homes</h1>
@@ -303,6 +347,7 @@
       </div>                          
     </div>
   </div>
+  </section>
 
 
 <!-- 
@@ -350,8 +395,7 @@
     </div>
 </section> -->
 
-    <section id="tools">
-        <div class="container">
+    <section id="tools" class="tools">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Tools & Tips</h2>
@@ -387,7 +431,6 @@
                     <a href="" class="btn btn-xl">Know More</a>
                 </div>                
             </div>
-        </div>
     </section>
 
     <!-- <header>
@@ -399,6 +442,18 @@
             </div>
         </div>
     </header> -->
+
+    <section id="GPinNews" class="GPinNews">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Garki Packing in News</h2>
+                </div>
+            </div>
+            <div class="row text-center" style="height:300px;">
+                           
+            </div>
+    </section>
+
 
     <footer class="footer">
 	
