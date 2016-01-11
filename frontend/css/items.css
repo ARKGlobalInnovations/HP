@@ -1,3 +1,4 @@
+
 .itemPageLogo{
   width:180px;
 }
@@ -162,6 +163,10 @@
 .contactInfoDatepicker{
   width:auto;
   display: inline-block;
+}
+.ItemsSummarySheet .panel-heading{
+  height:40px;
+  padding:3px;
 }
 @media screen and (max-width: 767px) {
    .sidenav {
